@@ -1,0 +1,257 @@
+﻿*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	background: url(../img/screen/bgd_star.png) no-repeat;
+	background-size: 100% 100%;
+	-ms-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/screen/bgd_star.png', sizingMethod= 'scale');
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/*-------- 标题 --------*/
+.title{
+	text-align: center;
+}
+.title img{
+	z-index: 100;
+}
+.title p{
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+	margin-top: -40px;
+	z-index: 200;
+	text-align: center;
+}
+.currentTime{
+	position: fixed;
+	top: 5px;
+	left: 8px;
+	color: white;
+	font-size: 14.5px;
+	font-weight: bold;
+}
+
+/*-------- 数据 --------*/
+.content1{
+	/*position: relative;*/
+	width: 99%;
+	margin: 0px auto;
+}
+.con_title{
+	display: inline-block;
+	padding: 2px 20px;
+	background: rgb(63, 188, 239);
+	letter-spacing: 5px;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 8px 0px;
+	border-radius: 3px;
+	behavior: url(pie.htc);
+}
+.infoDiv{
+	width: 100%;
+	border: 1px solid rgb(16, 89, 129);
+	position: relative;
+}
+.section{
+	width: 13.4%;
+	float: left;
+	color: white;
+	box-sizing: border-box;
+	text-align: center;
+}
+.section:nth-of-type(1){
+	width: 6%;
+}
+.section:nth-of-type(8){
+	margin-right: 0;
+}
+.section p{
+	color: rgb(46, 202, 247);
+	font-size: 18px;
+	font-weight: bold;
+	margin: 8px 0px;
+}
+.temperature{
+	position: relative;
+}
+.temperature img{
+	height: 150px;
+	margin-bottom: 5px;
+}
+.temperature span{
+	position: absolute;
+	bottom: 12%;
+	left: 32%;
+	font-weight: bold;
+}
+.humidity img{
+	height: 150px;
+	margin-bottom: 5px;
+}
+.numberDiv{
+	width: 70%;
+	margin: 45px auto;
+	border-radius: 5px;
+	border: 5px solid rgb(150, 150, 150);
+}
+.numberDiv span{
+	display: inline-block;
+	float: left;
+	width: 25%;
+	font-size: 35px;
+	background: black;
+	border: 1px solid rgb(130, 130, 130);
+	box-sizing: border-box;
+	padding: 10px 0px;
+	text-shadow: #C2C2C2 0px 3px 5px;
+}
+.corner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.corner1{
+	display: block;
+	width: 15px;
+	height: 3px;
+	background: rgb(63, 188, 239);
+	position: absolute;
+}
+.corner2{
+	display: block;
+	width: 3px;
+	height: 15px;
+	background: rgb(63, 188, 239);
+	position: absolute;
+}
+#c_leftup01{
+	top: 0;
+	left: 0;
+}
+#c_leftdown02{
+	bottom: 0;
+	left: 0;
+}
+#c_rightup03{
+	top: 0;
+	right: 0;
+}
+#c_rightdown04{
+	bottom: 0;
+	right: 0;
+}
+
+/*-------- 列表 --------*/
+.content2{
+	width: 99%;
+	margin: 0px auto;
+}
+.content2 table{
+	border-collapse: collapse;
+	background: rgba(0, 0, 0, 0.6);
+	font-size: 16px;
+}
+.content2 table th{
+	color: white;
+	background: rgb(0, 80, 115);
+	border: 1px solid rgba(65, 118, 159, 0.7);
+	padding: 8px 0px;
+}
+.content2 table td{
+	text-align: center;
+	color: rgb(210, 210, 210);
+	border: 1px solid rgba(65, 118, 159, 0.7);
+	padding: 8px 0px;
+}
+.progressDiv{
+	display: inline-block;
+	width: 200px;
+	height: 16px;
+	margin: 0px auto;
+	border-radius: 8px;
+	background: rgb(0, 255, 255);
+	vertical-align: middle;
+	position: relative;
+	z-index: 100;
+}
+.progressChange{
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-radius: 8px;
+	background: rgb(32, 174, 247);
+	z-index: 200;
+	text-align: center;
+	color: white;
+	line-height: 16px;
+}
+.pc01{
+	width: 40%;
+}
+.pc02{
+	width: 75%;
+}
+.pc03{
+	width: 68%;
+}
+.pc04{
+	width: 32%;
+}
+.pc05{
+	width: 86%;
+}
+
+/*-------- 图表 --------*/
+.content3{
+	width: 99%;
+	margin: 0px auto;
+}
+.picture1{
+	width: 49.5%;
+	height: 290px;
+	float: left;
+}
+.picture2{
+	width: 49.5%;
+	height: 290px;
+	float: right;
+}
+.picture1 img, .picture2 img{
+	width: 100%;
+	height: 100%;
+}
+
+/*-------- 告警 --------*/
+.warning{
+	width: 10%;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	background: rgba(255, 0, 0, 0.7);
+	color: white;
+	padding: 30px;
+	display: none;
+}
+.warningTitle{
+	text-align: center;
+	margin-bottom: 10px;
+}
+.warningInfo{
+	line-height: 25px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}

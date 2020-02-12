@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>生产示警规则管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：生产示警管理 > 生产示警规则管理</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>未按时排产预警规则</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tr class="menuText list_head">
+                                    <th class="">预警值设置：</th>
+                                    <td><input type="text" name="" id="" value="10" />天 <span class="redColor">*</span></td>
+                                    <th class="">告警方式：</th>
+                                    <td>自动汇报</td>
+                                    <th class="">上报对象：</th>
+                                    <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                </tr>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>未按时完工预警规则</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tr class="menuText list_head">
+                                    <th class="">预警值设置：</th>
+                                    <td><input type="text" name="" id="" value="10" />天 <span class="redColor">*</span></td>
+                                    <th class="">告警方式：</th>
+                                    <td>自动汇报</td>
+                                    <th class="">上报对象：</th>
+                                    <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>温湿度预警规则</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tr class="menuText list_head">
+                                    <th class="">温度预警下限：</th>
+                                    <td><input type="text" name="" id="" value="5" />℃ <span class="redColor">*</span></td>
+                                    <th class="">温度预警上限：</th>
+                                    <td><input type="text" name="" id="" value="45" />℃ <span class="redColor">*</span></td>
+                                    <th class="">告警方式：</th>
+                                    <td>自动汇报</td>
+                                    <th class="">上报对象：</th>
+                                    <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                </tr>
+                                <tr class="menuText list_head">
+                                    <th class="">湿度预警下限：</th>
+                                    <td><input type="text" name="" id="" value="15" />% <span class="redColor">*</span></td>
+                                    <th class="">湿度预警上限：</th>
+                                    <td><input type="text" name="" id="" value="85" />% <span class="redColor">*</span></td>
+                                    <th class="">告警方式：</th>
+                                    <td>自动汇报</td>
+                                    <th class="">上报对象：</th>
+                                    <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>车间生产告警规则列表</span></h4>
+                		
+                        <!-- 操作类型区 -->
+                        <div class="operate_area">
+                            <a onclick="addDetail1()" class="bgd_add img_hand">增加</a> 
+                            <a onclick="deleteDetail1()" class="bgd_delete img_hand">删除</a> 
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <!--<th class="checkSelectAll"></th>-->
+                                        <th class="" style="width: 25%;">告警名称</th>
+                                        <th class="" style="width: 25%;">告警方式</th>
+                                        <th class="" style="width: 25%;">预警值</th>
+                                        <th class="" style="width: 25%;">上报对象</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr1">
+                                    <tr class="listTableText list_list">
+                                        <!--<td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>-->
+                                        <td>一次交验合格率</td>
+                                        <td>自动汇报</td>
+                                        <td><input type="text" name="" id="" value="60" /></td>
+                                        <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <!--<td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>-->
+                                        <td>直通率</td>
+                                        <td>自动汇报</td>
+                                        <td><input type="text" name="" id="" value="60" /></td>
+                                        <td><select name="" class="selectWidth">
+                                    	<option value="">张三</option>
+                                    	<option value="">李四</option>
+                                    </select></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 确定按钮 -->
+                        <div class="certainBtn">
+                        	<a href="" class="bgd_blue_two img_hand">确定</a> 
+                            <a href="" class="bgd_white_two img_hand">重置</a> 
+                        </div>
+	                    <!-- 页码区域 -->
+	                    <!--<div class="page_area contentText clear">
+	                    	<div class="page_sum">
+	                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+	                    	</div>
+	                        <div class="page_jump">
+	                        	<span>跳转到&emsp;第</span>
+	                        	<input type="text" name="" id="" value="" />
+	                        	<span>页&emsp;</span>
+	                        	<button>Go</button>
+	                        </div>
+	                        <div class="page-pull-right async-page">
+	                            <button>上一页</button>
+	                            <button class="select_page">1</button>
+	                            <button>2</button>
+	                            <button>3</button>
+	                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+	                            <button>98</button>
+	                            <button>99</button>
+	                            <button>100</button>
+	                            <button>下一页</button>
+	                        </div>
+	                    </div>-->
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr1 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		//-------- 增加明细 ---------
+	    function addDetail1() {
+	        
+	        var dom = "<tr class='contentText list_list'><td><input type='text' name='' id='' value=''></td>";
+	        dom += "<td>手工汇报</td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><select><option>张三</option><option>李四</option></select></td></tr>";
+	        
+	        $("#addTr1").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail1() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr1").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+	</script>
+</html>

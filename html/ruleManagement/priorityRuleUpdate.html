@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>优先级规则</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存规则管理 > 优先级规则</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>创建优先级规则</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tr class="menuText list_head">
+                                    <th class="">规则名称：</th>
+                                    <td><input type="text" name="" id="" value="规则1" /> <span class="redColor">*</span></td>
+                                    <th class="">创建者：</th>
+                                    <td><input type="text" name="" id="" value="admin" /> <span class="redColor">*</span></td>
+                                    <th class="">创建时间：</th>
+                                    <td><input type="date" name="" id="" value="2018/05/12" /> <span class="redColor">*</span></td>
+                                </tr>
+                                <tr class="menuText list_head">
+                                    <th class="">规则描述：</th>
+                                    <td colspan="5">
+	                                    <textarea style="width: 95%;height: 100px;">优先级规则描述</textarea>
+	                                </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>仓库列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">仓库名称</th>
+                                        <th class="">仓库编号</th>
+                                        <th class="">仓库管理员</th>
+                                        <th class="">所属组织机构</th>
+                                        <th class="">所占面积</th>
+                                        <th class="">仓库地址</th>
+                                        <th class="">创建时间</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr1">
+                                    <tr class="listTableText list_list">
+                                        <td>仓库一</td>
+                                        <td>1001</td>
+                                        <td>admin</td>
+                                        <td>组织机构1</td>
+                                        <td>100</td>
+                                        <td>北京市</td>
+                                        <td>2018-05-08</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>仓库二</td>
+                                        <td>1001</td>
+                                        <td>admin</td>
+                                        <td>组织机构2</td>
+                                        <td>100</td>
+                                        <td>西安市</td>
+                                        <td>2018-05-08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>优先级规则详情</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th rowspan="2">物料类型</th>
+                                        <th rowspan="2">物料编码</th>
+                                        <th colspan="3">优先级</th>
+                                    </tr>
+                                    <tr class="menuText list_head">
+                                        <th>一级</th>
+                                        <th>二级</th>
+                                        <th>三级</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr1">
+                                    <tr class="listTableText list_list">
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">产成品</option>
+                                        		<option value="">半成品</option>
+                                        		<option value="">原材料</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="2100101" /></td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">供应商</option>
+                                        		<option value="">包装类型</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">供应商</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">包装类型</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">包装类型</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">供应商</option>
+                                        	</select>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">半成品</option>
+                                        		<option value="">产成品</option>
+                                        		<option value="">原材料</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="2100101" /></td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">供应商</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">包装类型</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">供应商</option>
+                                        		<option value="">包装类型</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">包装类型</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">供应商</option>
+                                        	</select>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">原材料</option>
+                                        		<option value="">产成品</option>
+                                        		<option value="">半成品</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="2100101" /></td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">包装类型</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">供应商</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">供应商</option>
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">包装类型</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="">
+                                        		<option value="">出入库方式</option>
+                                        		<option value="">包装类型</option>
+                                        		<option value="">供应商</option>
+                                        	</select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 确定按钮 -->
+                        <div class="certainBtn">
+                        	<a href="" class="bgd_blue_two img_hand">确定</a> 
+                            <a href="checkRuleList.html" class="bgd_white_two img_hand">返回</a> 
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr1 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+	</script>
+</html>

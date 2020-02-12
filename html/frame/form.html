@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>列表页面</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layui.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：用户组权限管理 > 添加新用户组</span></p>
+	            
+				<!------ tab标签 ------>
+	            <div class="layui-tab layui-tab-card">
+				    <ul class="layui-tab-title">
+					    <li class="layui-this">填写申请</li>
+					    <li>入库申请</li>
+					    <li>出库申请</li>
+					    <li>审核操作</li>
+					    <li>完成操作</li>
+				    </ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	
+					    	<div class="article_list">
+					            <!------- 内容 ------->
+					            <div class="content content1">
+					                <!-- 用户列表内容区 -->
+					                <div class="con con_01">
+					                    <!-- 表单信息填写区 -->
+					                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>填写表单内容</span><span class="necessary">（带*号为必填项）</span></h4>
+					                    <div class="write_area">
+					                        <form id="addFrom" action="/userGroup/add" method="post">
+					                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%">
+					                                <tbody>
+					                                    <tr>
+					                                        <th>用户组编码：</th>
+					                                        <td>
+					                                        	<input id="groupCode" name="groupCode"
+					                                            onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+					                                            type="number" onblur="checkregisteredUserGroupCode()" value=""> <span
+					                                            class="redColor">*</span>
+					                                        </td>
+					                                        <th>用户组名称：</th>
+					                                        <td>
+					                                        	<input id="groupName" name="groupName" class="overLine"
+					                                            placeholder="长度4-20位,中文按二位计数,无特殊符" onblur="checkregisteredUserGroupName()"
+					                                            type="text" value=""> <span class="redColor">*</span>
+					                                        </td>
+					                                        <th>用户组状态：</th>
+					                                        <td>
+					                                        	<select id="groupState" name="groupState">
+					                                                <option value="启用">启用</option>
+					                                                <option value="停用">停用</option>
+					                                        	</select>
+					                                        </td>
+					                                    </tr>
+					                                    <tr>
+					                                        <th>用户组编码：</th>
+					                                        <td><input id="groupCode" name="groupCode"
+					                                            onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+					                                            type="number" onblur="checkregisteredUserGroupCode()" value=""> <span
+					                                            class="redColor">*</span>
+					                                        </td>
+					                                        <th>用户组名称：</th>
+					                                        <td><input id="groupName" name="groupName" class="overLine"
+					                                            placeholder="长度4-20位,中文按二位计数,无特殊符" onblur="checkregisteredUserGroupName()"
+					                                            type="text" value=""> <span class="redColor">*</span>
+					                                        </td>
+					                                        <th>用户组状态：</th>
+					                                        <td><select id="groupState" name="groupState">
+					                                                <option value="启用">启用</option>
+					                                                <option value="停用">停用</option>
+					                                        </select>
+					                                        </td>
+					                                    </tr>
+					                                    <tr>
+					                                        <th>用户组描述：</th>
+					                                        <td colspan="5"><textarea id="groupDesc" name="groupDesc" class="textarea_describle"
+					                                                rows="6"></textarea></td>
+					                                    </tr>
+					                                </tbody>
+					                            </table>
+					                        </form>
+					                        <!-- 保存、重置按钮区 -->
+					                        <div align="center" class="btn_submit">
+					                            <a href="list.html" class="bgd_blue_two img_hand contentText">确定</a>
+					                            <a href="list.html" class="bgd_white_two img_hand"> 返回 </a>
+					                        </div>
+					                    </div>
+					                </div>
+									<!-- 列表展示区 -->
+						            <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>新增列表项</span></h4>
+									<div class="table_border">
+						                <div class="show_list">
+						                	<div class="list_area">
+						                        <!-- 信息列表区 -->
+						                        <div class="info_area">
+						                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+						                                <tbody>
+						                                    <tr class="menuText list_head">
+						                                        <th class="">用户组编码</th>
+						                                        <th class="">用户组名称</th>
+						                                        <th class="">用户组状态</th>
+						                                        <th class="">用户组描述</th>
+						                                    </tr>
+						                                </tbody>
+						                                <tbody class="tablelist">
+						                                    <tr class="contentText list_bgd">
+						                                        <td>0001</td>
+						                                        <td>用户组1112</td>
+						                                        <td>启用</td>
+						                                        <td>新增用户组</td>
+						                                    </tr>
+						                                </tbody>
+						                            </table>
+						                        </div>
+						                    </div>
+						                </div>
+									</div>
+					            </div>
+					        </div>
+					    </div>
+					    
+					    <div class="layui-tab-item">2</div>
+					    <div class="layui-tab-item">3</div>
+					    <div class="layui-tab-item">4</div>
+					    <div class="layui-tab-item">5</div>
+					    <div class="layui-tab-item">6</div>
+				    </div>
+				</div>
+	            
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$(".info_area td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		
+		layui.use('element', function(){
+			var $ = layui.jquery, 
+			    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+		    //触发事件：添加、删除、切换
+		    var active = {
+			    tabAdd: function(){
+			        //新增一个Tab项
+			        element.tabAdd('demo', {
+			        	title: '新选项'+ (Math.random()*1000|0), 
+			        	content: '内容'+ (Math.random()*1000|0),
+			        	id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+			        })
+			    },
+			    tabDelete: function(othis){
+			        //删除指定Tab项
+			        element.tabDelete('demo', '44'); //删除：“商品管理”
+			        othis.addClass('layui-btn-disabled');
+			    },
+			    tabChange: function(){
+			        //切换到指定Tab项
+			        element.tabChange('demo', '22'); //切换到：“用户管理”
+			    }
+		    };
+		  
+		    $('.site-demo-active').on('click', function(){
+		    	var othis = $(this), 
+		        	type = othis.data('type');
+		    	active[type] ? active[type].call(this, othis) : '';
+		    });
+		  
+		    //Hash地址的定位
+		    var layid = location.hash.replace(/^#test=/, '');
+		    element.tabChange('test', layid);
+		  
+		    element.on('tab(test)', function(elem){
+		   		location.hash = 'test='+ $(this).attr('lay-id');
+		    });
+		});
+		
+	</script>
+</html>

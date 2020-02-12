@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>机损单详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：车间生产管理 > 工位机损管理 > 工位机损申请单详情</span></p>
+
+				<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+		            <!------- 内容 ------->
+		            <div class="content content1">
+		            	<!-- 用户列表内容区 -->
+		                <div class="con con_01">
+		                    <!-- 表单信息填写区 -->
+		                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工位机损申请单</span></h4>
+		                    <div class="write_area">
+		                        <form id="addFrom" action="" method="post">
+		                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%" style="margin-bottom: 10px;">
+		                                <tbody>
+		                                    <tr>
+		                                    	<th>项目编码：</th>
+		                                        <td><input type="text" name="" value="XMGSFG42542" /></td>
+		                                        <th>产品图号：</th>
+		                                        <td><input type="text" name="" value="IMAGE01" /></td>
+		                                        <th>产品名称：</th>
+		                                        <td><input type="text" name="" value="产品一" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>计划号：</th>
+											    <td><input type="text" name="" value="JH45634634531" /></td>
+		                                        <th>申请人：</th>
+		                                        <td><select value="">
+													<option value="">张三</option>
+													<option value="">李四</option>
+											    </select></td>
+		                                        <th>申请日期：</th>
+		                                        <td><input type="text" name="" id="dateControl" value="2018-9-20" readonly="readonly" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>工序：</th>
+		                                        <td><input type="text" name="" value="印刷" /></td>
+		                                    	<th>审核人：</th>
+		                                        <td colspan="3"><select value="">
+													<option value="">李四</option>
+													<option value="">张三</option>
+											    </select></td>
+		                                    </tr>
+		                                </tbody>
+		                            </table>
+		                        </form>
+		                    </div>
+		                </div>
+						<!-- 列表展示区 -->
+						<div class="table_border">
+			                <div class="show_list">
+			                	<div class="title_operate">
+			                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工位机损详情</span></h4>
+			                		
+			                        <!-- 操作类型区 -->
+			                        <div class="operate_area" id="addOperate">
+			                            <a href="lossManagement.html" class="bgd_white_two img_hand">返回</a> 
+			                        </div>
+			                	</div>
+			                	<div class="list_area">
+			                        <!-- 信息列表区 -->
+			                        <div class="info_area">
+			                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+			                                <tbody>
+			                                    <tr class="menuText list_head">
+													<th class="">序号</th>
+													<th class="">物料编码</th>
+													<th class="">物料名称</th>
+													<th class="">规格型号</th>
+													<th class="">计量单位</th>
+													<th class="">数量</th>
+													<th class="">备注</th>
+			                                    </tr>
+			                                </tbody>
+			                                <tbody class="tablelist" id="addTr">
+			                                    <tr class="listTableText list_list">
+			                                        <td>1</td>
+			                                        <td>AU0000123</td>
+			                                        <td>DC/DC</td>
+			                                        <td>MAX1776EUA</td>
+			                                        <td>个</td>
+			                                        <td>12</td>
+			                                        <td></td>
+			                                    </tr>
+			                                </tbody>
+			
+			                            </table>
+			                        </div>
+			                        <!-- 页码区域 -->
+				                    <div class="page_area contentText clear">
+				                    	<div class="page_sum">
+				                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+				                    	</div>
+				                        <div class="page_jump">
+				                        	<span>跳转到&emsp;第</span>
+				                        	<input type="text" name="" id="" value="" />
+				                        	<span>页&emsp;</span>
+				                        	<button>Go</button>
+				                        </div>
+				                        <div class="page-pull-right async-page">
+				                            <button>上一页</button>
+				                            <button class="select_page">1</button>
+				                            <button>2</button>
+				                            <button>3</button>
+				                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+				                            <button>98</button>
+				                            <button>99</button>
+				                            <button>100</button>
+				                            <button>下一页</button>
+				                        </div>
+				                    </div>
+			                    </div>
+			                </div>
+						</div>
+		            </div>
+		        </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr1 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+	</script>
+</html>

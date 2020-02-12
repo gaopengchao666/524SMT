@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加入库单</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存日常管理 > 入库管理 > 添加入库记录</span></p>
+					    	
+		    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+		            <!------- 内容 ------->
+		            <div class="content content1">
+		            	<!-- 用户列表内容区 -->
+		                <div class="con con_01">
+		                    <!-- 表单信息填写区 -->
+		                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>物料入库申请单</span></h4>
+		                    <div class="write_area">
+		                        <form id="addFrom" action="" method="post">
+		                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%" style="margin-bottom: 10px;">
+		                                <tbody>
+		                                    <tr>
+		                                    	<th>ERP出库单号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>入库单号：</th>
+		                                        <td><input type="text" name="" value="RKDH20180914142554302" /></td>
+		                                        <th>入库日期：</th>
+		                                        <td><input class="date" name="" value="2018-09-14" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>入库类型：</th>
+											    <td><select id="instockType" name="instockType" value="">
+													<option value="安全库存补料入库">安全库存补料入库</option>
+													<option value="齐套缺料补料入库">齐套缺料补料入库</option>
+													<option value="机损补料入库">机损补料入库</option>
+													<option value="生产退料入库">生产退料入库</option>
+													<option value="其它类型入库">其它类型入库</option>
+											    </select></td>
+		                                        <th>产品图号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>计划号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>物料用途：</th>
+		                                        <td><select value="">
+													<option value=""></option>
+													<option value="机载/弹载">机载/弹载</option>
+											    </select></td>
+		                                    	<th>项目编码：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>制单人：</th>
+		                                        <td><input type="text" name="" value="admin" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                    	<th>ERP配送计划：</th>
+		                                        <td colspan="5"><input type="text" name="" value="" /></td>
+		                                    </tr>
+		                                </tbody>
+		                            </table>
+		                        </form>
+		                    </div>
+		                </div>
+						<!-- 列表展示区 -->
+						<div class="table_border">
+			                <div class="show_list">
+			                	<div class="title_operate">
+			                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>物料入库单明细</span></h4>
+			                		
+			                        <!-- 操作类型区 -->
+			                        <div class="operate_area" id="addOperate">
+			                            <a id="addDetail" onclick="addDetail()" class="bgd_add img_hand">添加</a> 
+			                            <a id="deleteDetail" onclick="deleteDetail()" class="bgd_delete img_hand">删除</a> 
+			                        </div>
+			                	</div>
+			                	<div class="list_area">
+			                        <!-- 信息列表区 -->
+			                        <div class="info_area">
+			                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+			                                <tbody>
+			                                    <tr class="menuText list_head">
+			                                          <th class="checkSelectAll"></th>
+													<th class="">序号</th>
+													<th class="">物料编码</th>
+													<th class="">物料名称</th>
+													<th class="">物料类型</th>
+													<th class="">规格型号</th>
+													<th class="">计量单位</th>
+													<th class="">数量</th>
+													<th class="">仓库</th>
+													<th class="">库位</th>
+													<th class="">生产日期</th>
+													<th class="">失效日期</th>
+													<th class="">供应商</th>
+			                                    </tr>
+			                                </tbody>
+			                                <tbody class="tablelist" id="addTr">
+			                                    <tr class="listTableText list_list">
+												    <td><input type='checkbox' class='input_checkBox'></td>
+			                                        <td>1</td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" name="" value="" /></td>
+			                                        <td><input type="text" class="date" name="" value="" /></td>
+			                                        <td><input type="text" class="date" name="" value="" /></td>
+													 <td><input type="text" name="" value="" /></td>
+			                                    </tr>
+			                                </tbody>
+			
+			                            </table>
+			                        </div>
+			                        <!-- 确定按钮 -->
+			                        <div class="certainBtn">
+			                        	<a href="instockDetail.html" class="bgd_blue_two img_hand">保存</a> 
+			                            <a href="instockList.html" class="bgd_white_two img_hand">返回</a> 
+			                        </div>
+			                    </div>
+			                </div>
+						</div>
+		            </div>
+		        </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 打印二维码 -->
+			<div class="mask hidden">
+				<div class="printDiv">
+					<h4 class="printTitle">
+						物料二维码
+						<img onclick="backTwocode();" src="../../img/list/delete.png"/>
+					</h4>
+					<div class="twocodeDiv">
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+						 <div class="twocodeMoudle">
+						 	<img src="../../img/list/twocode.png"/>
+						 	<p>物料名称</p>
+						 </div>
+					</div>
+					<!-- 确定按钮 -->
+                    <div class="certainBtn">
+                    	<a href="" class="bgd_blue_two img_hand">确定</a> 
+                        <a onclick="backTwocode();" class="bgd_white_two img_hand">返回</a> 
+                    </div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#metailInfo td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");  
+			}
+		);
+		
+		//打印二维码
+		function addTwocode(){
+			$(".mask").css("display", "block");
+		}
+		//返回增加列表
+		function backTwocode(){
+			$(".mask").css("display", "none");
+		}
+		
+		//-------- 增加明细 ---------
+	    function addDetail() {
+	    var trInt = $("#addTr").find("tr").length;
+		var no = trInt + 1;// 序号
+		var dom = "<tr class='contentText list_list'>";
+		dom += "<td><input type='checkbox' class='input_checkBox'></td>";
+		dom += "<td>" + no + "</td>";
+		dom += "<td><div  class='addRemind1'><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].materialCode' id='instockApplyDetails["
+				+ trInt
+				+ "].materialCode' value='' class='materialCode'></div></td>";
+		dom += "<td><div  class='addRemind1'><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].materialName' id='instockApplyDetails["
+				+ trInt
+				+ "].materialName' class='materialName' value=''><input type='hidden' name='instockApplyDetails["
+				+ trInt
+				+ "].unitscale' class='unitscale' value=''><input type='hidden' name='instockApplyDetails["
+				+ trInt + "].mname' class='mname' value=''></div></td>";
+		dom += "<td><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].materialType' id='instockApplyDetails["
+				+ trInt
+				+ "].materialType' readonly='readonly' class='materialType' value=''></td>";
+		dom += "<td><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].materialSpec' id='instockApplyDetails["
+				+ trInt
+				+ "].materialSpec' readonly='readonly' class='materialSpec' value=''></td>";
+		dom += "<td><div  class='addRemind1'><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].materialUseUnit' id='instockApplyDetails["
+				+ trInt
+				+ "].materialUseUnit' readonly='readonly' class='materialUseUnit' value=''></div></td>";
+		dom += "<td><div  class='addRemind1'><input type='text' name='instockApplyDetails["
+				+ trInt
+				+ "].useUnitNum' class='useUnitNum' id='instockApplyDetails["
+				+ trInt
+				+ "].useUnitNum' value=''></div></td>";
+		dom += "<td><div  class='addRemind1'><input type='text' name='instockApplyDetails["
+				+ trInt + "].warehouse' id='instockApplyDetails["
+				+ trInt + "].warehouse' class='warehouse' value=''></div></td>";
+		dom += "<td><input type='text' name='instockApplyDetails[" + trInt
+				+ "].location' id='instockApplyDetails[" + trInt
+				+ "].location' value=''></td>";
+		dom += "<td><div  class='addRemind1'><input class='date' name='instockApplyDetails["
+				+ trInt
+				+ "].productDate' id='instockApplyDetails["
+				+ trInt
+				+ "].productDate' readonly='readonly' value=''></div></td>";
+		dom += "<td><input class='date' name='instockApplyDetails["
+				+ trInt
+				+ "].expirationDate' id='instockApplyDetails["
+				+ trInt
+				+ "].expirationDate' readonly='readonly' value=''></td>";
+		dom += "<td><input name='instockApplyDetails[" + trInt
+				+ "].provider' id='instockApplyDetails[" + trInt
+				+ "].provider' value=''</td>";
+		dom += "</tr>";
+		$("#addTr").append(dom);
+	      $(".date").datepicker({
+        	dateFormat : 'yy-mm-dd',
+            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+ 		 	changeYear:true,
+ 		 	changeMonth:true,
+ 		 	showOn:"button",
+ 		 	buttonImage:"../../img/button/calendar.png",
+ 		 	buttonImageOnly:false
+        });
+	    }
+		
+			 $(".date").datepicker({
+        	dateFormat : 'yy-mm-dd',
+            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+ 		 	changeYear:true,
+ 		 	changeMonth:true,
+ 		 	showOn:"button",
+ 		 	buttonImage:"../../img/button/calendar.png",
+ 		 	buttonImageOnly:false
+        });
+		
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+	</script>
+</html>

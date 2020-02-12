@@ -1,0 +1,657 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 16px;
+	font-family: "瀵邦喛钂嬮梿鍛寸拨";
+	margin-top: 0px !important;
+}
+body{
+	min-width: 1200px;
+}
+/*-------- 閺嶅洨顒烽柅姘辨暏閺嶅嘲绱�-------*/
+ul{
+	list-style: none;
+}
+a{
+	border: none;
+	text-decoration: none;
+	color: black;
+	box-sizing: border-box;
+}
+img{
+	border: none;
+}
+table{
+	border-collapse: collapse;
+}
+button{
+	border: none;
+	background: none;
+	outline: none;
+	box-sizing: border-box;
+}
+h5{
+	text-align: center;
+	padding: 12px 0px;
+}
+input, select{
+	width: 200px;
+	height: 20px;
+	border: 1px solid rgb(220, 220, 220);
+	background: white;
+	border-radius: 3px;
+	line-height: 20px;
+	font-size: 12.6px;
+}
+textarea{
+	width: 60%;
+	border: 1px solid rgb(220, 220, 220);
+	background: white;
+	line-height: 20px;
+	font-size: 14px;
+}
+/*-------- input閻ㄥ垺utton缁鐎烽幐澶愭尦 -------*/
+.input_button{
+	width: 100px;
+	height: 20px;
+	border: 1px solid rgb(220, 220, 220);
+	border-radius: 3px;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.bgd_import{
+	background:url(../img/button/bgd_import1.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+
+
+/*-------- input閻ㄥ垻heckBox缁鐎烽幐澶愭尦 -------*/
+.input_checkBox{
+	width: 14px !important;
+	height: 14px;
+	border: 1px solid rgb(220, 220, 220);
+	background: white;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+/*-------- 瀹革箑褰稿ù顔煎З -------*/
+.floatLeft{
+	float: left;
+}
+.floatRight{
+	float: right;
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*-------- 鐎涙ぞ缍嬫担宥囩枂 -------*/
+.alignCenter{
+	text-align: center;
+}
+.alignLeft{
+	text-align: left;
+}
+.alignRight{
+	text-align: right;
+}
+/*-------- 鐎涙ぞ缍嬫径褍鐨�-------*/
+.firstText{
+	font-size: 16px;
+}
+.secondText{
+	font-size: 14.4px;
+}
+.thirdText{
+	font-size: 13.6px;
+}
+.menuText{
+	font-size: 14.2px;
+}
+.contentText{
+	font-size: 12.6px;
+}
+.listTableText{
+	font-size: 11.5px;
+}
+/*-------- 闁插秶鍋ｇ�妞剧秼娑撹櫣瀛╅懝锟�-------*/
+.importantText{
+	color: rgb(255, 50, 50);
+}
+/*-------- 闁插秶鍋ｇ�妞剧秼娑撹櫣瀛╅懝锟�-------*/
+.importantText{
+	color: rgb(255, 50, 50);
+}
+/*-------- 閸戞椽鏁婄悰銊ュ礋鏉堣顢嬮崣妯硅礋缁俱垼澹婇搹姘卞殠濡楋拷 -------*/
+.addRemind{
+	position: relative; 
+}
+.addRemind1{
+	position: relative; 
+}
+.addRemind label{
+    padding: 0px 2px;
+}
+.error{
+	border: 1px dashed rgb(255, 50, 50) !important;
+}
+.addRemind label.error {
+    position: absolute;
+    z-index: 100;
+    left: 10px;
+    top: 27px;
+    display: inline-block;
+    opacity: 1;
+    background: #F2DEDE;
+    border: none !important;
+    border-radius: 2px;
+    box-shadow: none;
+    cursor: text;
+    color: #B94A48 !important;
+    font-size: 12px;
+    word-wrap: break-word;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+.addRemind1 label.error {
+    position: absolute;
+    z-index: 100;
+    left: 10px;
+    top: 20px;
+    display: inline-block;
+    opacity: 1;
+    background: #F2DEDE;
+    border: none !important;
+    border-radius: 2px;
+    box-shadow: none;
+    cursor: text;
+    color: #B94A48 !important;
+    font-size: 12px;
+    word-wrap: break-word;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+.textArea label.error{
+    top: 107px !important;
+}
+/*-------- 妫板嫯顒熼崪灞芥啞鐠�拷 -------*/
+.alarmLevel1{
+	background: yellow !important;
+}
+.alarmLevel2{
+	background: red !important;
+}
+/*-------- 闂呮劘妫岄崠鍝勭厵閸э拷 -------*/
+.hidden{
+	display: none;
+}
+/*-------- 閹靛瀵氶弽宄扮础楠炴湹绗栭崣妯煎閼癸拷 -------*/
+.redColor{             
+	color: rgb(255, 50, 50) !important;/*-- 韫囧懎锝炴い鍦畱缁俱垼澹婇弽鍥ㄦ暈 --*/
+}
+.cursor:hover{
+	cursor: pointer;
+	color: rgb(255, 50, 50) !important;
+}
+.checkSelectAll{
+	cursor:pointer;
+}
+/*-------- 鐡掑懎鍤稉锟界悰灞炬▔缁�櫣鍋ｉ悙鍦仯楠炲爼娈ｉ挊锟�-------*/
+.overLine{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+/*--婢х偛濮為幐澶愭尦閻ㄥ嫭鐗卞锟�--*/
+.btn_img{
+	position: relative;
+	top: 6px;
+}
+.btn_img:hover{
+	cursor: pointer;
+}
+.img_hand:hover{
+	cursor: pointer;
+}
+
+/*------- 闁鑵戦幐澶愭尦 ------*/
+.btn_blank{
+	background: rgb(68, 161, 248) !important;
+	color: white;
+	padding: 1px 10px !important;
+	border-radius: 3px;
+	border: 1px solid rgb(68, 161, 248) !important;
+	margin: 4px 5px !important;
+}
+/*------- 閺堫亪锟藉鑵戦幐澶愭尦 ------*/
+.btn_noSelect{
+	background: rgb(255, 255, 255) !important;
+	color: black !important;
+	padding: 1px 10px !important;
+	border-radius: 3px;
+	border: 1px solid rgb(68, 161, 248) !important;
+	margin: 4px 5px !important;
+}
+.btn_blank:hover{
+	cursor:pointer;
+}
+.btn_noSelect:hover{
+	cursor:pointer;
+}
+
+/*-- 瀵煎嚭 --*/
+.bgd_export 
+ {
+	 background:url(../img/button/bgd_import2.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+ }
+
+.bgd_add 
+ {
+	 background:url(../img/button/bgd_add.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+ }
+/*--閸掔娀娅庨幐澶愭尦閻ㄥ嫭鐗卞锟�-*/
+.bgd_delete
+{
+	 background:url(../img/button/bgd_delete.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+.bgd_update{
+	background:url(../img/button/bgd_update.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*--婢х偛濮為弰搴ｇ矎閹稿鎸抽惃鍕壉瀵拷--*/
+.bgd_add_detail
+{
+	 background:url(../img/button/bgd_add_detail.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-indent:20px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*--閸掔娀娅庨弰搴ｇ矎閹稿鎸抽惃鍕壉瀵拷--*/
+.bgd_delete_detail
+{
+	 background:url(../img/button/bgd_delete_detail.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-indent:20px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*--閸ユ稐閲滅�妤冩畱閹兼粎鍌�-*/
+.bgd_blue_four
+{
+	background:url(../img/button/bgd_blue_four.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:70px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:white;
+}
+/*--閸ユ稐閲滅�妤冩畱閹兼粎鍌�-*/
+.bgd_blue_five
+{
+	background:url(../img/button/bgd_blue_five.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:white;
+}
+/*--娑撱倓閲滅�妤冩畱閹兼粎鍌ㄩ幐澶愭尦--*/
+.bgd_blue_search
+{
+	background:url(../img/button/bgd_blue_search.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:16px;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:white;
+}
+
+.bgd_white_clear
+{
+	background:url(../img/button/bgd_white_clear.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:16px;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+}
+
+.bgd_blue_two
+{
+	background:url(../img/button/bgd_blue_two.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:50px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:white;
+	 margin-bottom: 10px;
+}
+
+.bgd_white_two
+{
+	background:url(../img/button/bgd_white_two.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:50px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+	 margin-bottom: 10px;
+}
+
+.bgd_white_three
+{
+	background:url(../img/button/bgd_white_three.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+	 margin-bottom: 10px;
+}
+
+.bgd_white_two_page
+{
+	background:url(../img/button/bgd_white_two.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:50px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 color:black !important;
+	 margin-bottom: 10px;
+	 margin-left: 4px;
+     position: relative;
+     top:0px;
+}
+
+/*--------- 閸栧搫娼￠崕鎸庣垼妫版娈戝〒鎰綁閼冲本娅�----------*/
+.title_background{
+   background: -webkit-linear-gradient(left, rgba(200, 220, 245, 1) 1%, rgba(170, 170, 170, 1) 50%, rgba(200, 220, 245, 1) 100%) 0 0 100% 0/0 0 1.5px 0 stretch;
+}
+
+/*---------- 濠婃艾濮╅弶鈩冪壉瀵拷 ----------*/
+/*------------ ie -----------*/
+/*鐎规矮绠熷姘З閺夛繝鐝�钘夊挤閼冲本娅�妤傛ê顔旈崚鍡楀焼鐎电懓绨插Ο顏嗙彨濠婃艾濮╅弶锛勬畱鐏忓搫顕�/  
+#tree::-webkit-scrollbar{  
+    width: 14px;  
+    /*height: 16px;*/  
+    background-color: rgb(235, 245, 255);  
+}    
+/*鐎规矮绠熷姘З閺壜ゅ缓闁拷 閸愬懘妲捐ぐ锟�閸﹀棜顫�/  
+#tree::-webkit-scrollbar-track{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    /*border-radius: 10px;*/  
+    background-color: rgb(235, 245, 255); 
+}  
+/*鐎规矮绠熷鎴濇健 閸愬懘妲捐ぐ锟�閸﹀棜顫�/  
+#tree::-webkit-scrollbar-thumb{  
+    /*border-radius: 10px;*/  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    background-color: rgb(120, 190, 250);
+}
+/*------- google濞村繗顫嶉崳銊ょ瑓閻ㄥ嫭绮撮崝銊︽蒋閺嶅嘲绱�-------*/
+.scroll_style{
+	scrollbar-face-color: rgb(120, 190, 250);       /*-- 閹缍嬮惃鍕剹閺咁垶顤侀懝锟�--*/
+	scrollbar-arrow-color: rgb(50, 100, 255);      /*-- 娑撳﹣绗呯粻顓炪仈閻ㄥ嫰顤侀懝锟�--*/
+	scrollbar-track-color: rgb(235, 245, 255);      /*-- 娑擃參妫垮鎴濆З閸栬櫣娈戞０婊嗗 --*/
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/*------ 瀵懓鍤鍡欐畱閺嶅嘲绱＄拋鍓х枂 ------*/
+#msg{
+    width:340px;
+    position: fixed;
+    z-index:999;
+    top: 40%;
+    margin-top:-100px;
+    left:50%;
+    margin-left:-170px;
+    background:white;
+    box-shadow:5px 5px 8px rgb(153, 153, 153);
+    font-size:16px;
+    color:rgb(102, 102, 102);
+    text-align: center;
+    line-height: 32px;
+    display:inline-block;
+    padding-bottom:20px;
+    border-radius:3px;
+    transition: 2s;
+}
+#msg_top{
+	font-size: 15px;
+	color: white;
+    background:rgb(68, 161, 248);
+    padding:2px 15px 2px 10px;
+    text-align:left;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+#msg_img{
+	width: 25px;
+	vertical-align: middle;
+}
+#msg_top span{
+    font-size:20px;
+    float:right;
+    cursor:pointer;
+}
+#msg_cont{
+    padding:20px;
+    text-align:left;
+    color: rgb(0, 80, 140);
+}
+.msg_btn{
+    display:inline-block;
+    cursor:pointer;
+	width:50px;
+	height:22px;
+    background:url(../img/button/bgd_blue_two.png) no-repeat;
+	font-size:14px;
+	text-align:center;
+	line-height:22px;
+	color:white;
+}
+#msg_clear{
+    float:right;
+    margin-right: 30px;
+}
+#msg_clear1{
+    float:right;
+    margin-right: 20px;
+}
+#msg_cancle{
+    float:right;
+    margin-right: 30px;
+}
+#msg_mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 900;
+}
+
+/*------ 妞ょ敻娼伴崝鐘烘祰缁涘绶熸潪顒�箑 ------*/
+.loader{  
+    position: fixed;  
+    left: 0px;  
+    top: 0px;  
+    width: 100%;  
+    height: 100%;  
+    z-index: 9999;  
+    background-color: rgba(0, 0, 0, 0.4);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000);
+}  
+.loaderContent{
+	width: 600px;
+	height: 150px;
+	background: url(../img/button/loaderBackground.png);
+	margin: 0px auto;
+	margin-top: 200px;
+}
+.loaderContent img{
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 50px;
+}
+.loaderContent p{
+	float: left;
+	width: 450px;
+	height: 100%;
+	line-height: 150px;
+	font-size: 20px;
+	font-weight: bolder;
+	color: rgb(150, 150, 150);
+}
+.hidden{
+	display: none;
+}
+
+/*---------- 閻楀牆鐔�----------*/
+.ending{
+	font-size: 12px;
+	color: rgb(50, 50, 50);
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+/*----- 妞ょ數鐖�-----*/
+.page_area{
+	width: 100%;	
+	/*text-align: center;*/
+	padding: 5px 0px;
+	margin-bottom: 10px;
+}
+.page_sum{
+	float: left;
+	font-size: 11px;
+	margin-left: 10px;
+	color: rgb(90, 90, 90);
+}
+.async-page{
+	float: right;
+	margin-right: 10px;
+}
+.async-page > button{
+	font-size: 12px;
+	margin-right:5px;
+	padding: 1px 5px;
+	border-radius: 3px;
+	background: rgb(240, 240, 240);
+	box-shadow: 1px 1px 1px 1px rgb(100, 100, 100);
+	cursor: pointer;
+}
+.async-page > button:hover{
+	background: rgb(68, 161, 248);
+}
+.select_page{
+	background: rgb(68, 161, 248) !important;
+	color: white;
+	font-weight: bold;
+}
+
+
+/*----- 鎿嶄綔鍒楀浘鏍囧紑濮�-----*/
+.common-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url(../img/list/icon.png) no-repeat;
+}
+
+.editor-icon {
+    background-position: -20px 0px;
+}
+.editor-disable-icon {
+    background-position: -20px -20px;
+}
+
+.editor-pbom-icon {
+    background-position: -60px 0px;
+}
+.editor-pbom-disable-icon {
+    background-position: -60px -20px;
+}
+
+.view-icon {
+    background-position: 0px 0px;
+}
+.view-disable-icon {
+    background-position: 0px -20px;
+}
+

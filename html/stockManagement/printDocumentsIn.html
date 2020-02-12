@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>入库单打印单据</title>
+		<style type="text/css">
+			.wrap{
+				width: 100%;
+				margin: 0px auto;
+			}
+			table{
+				width: 100%;
+				font-size: 15px;
+			}
+			img{
+				width: 60px;
+				height: 60px;
+				vertical-align: middle;
+			}
+			th,td{
+				height: 25px;
+			}
+			.table_head{
+				background: rgb(255, 240, 220);
+			}
+			.list_head{
+				background: rgb(255, 240, 220);
+			}
+			.sureBtn{
+				margin-top: 20px;
+				text-align: center;
+			}
+			.bgd_blue_two{
+				text-decoration: none;
+				background:url(../../img/button/bgd_blue_two.png) no-repeat;
+				 display:inline-block;
+				 font-size:14px;
+				 width:50px;
+				 height:22px;
+				 text-align:center;
+				 line-height:22px;
+				 margin-left:20px;
+				 color:white;
+			}
+			.bgd_white_two{
+				text-decoration: none;
+				background:url(../../img/button/bgd_white_two.png) no-repeat;
+				 display:inline-block;
+				 font-size:14px;
+				 width:50px;
+				 height:22px;
+				 text-align:center;
+				 line-height:22px;
+				 margin-left:20px;
+				 color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+            <table class="contentText" border="1" cellspacing="0" cellpadding="0">
+                <tbody class="table_head">
+                	<tr class="table_title"><th colspan="12">物料入库单</th></tr>
+                    <tr>
+                        <th>入库单号：</th>
+                        <td>20180405</td>
+                        <th>入库日期：</th>
+                        <td>2018/04/05</td>
+                        <th>入库类型：</th>
+                        <td>配送入库</td>
+                    </tr>
+                    <tr>
+                        <th>产品图号：</th>
+                        <td>IMAGE01</td>
+                        <th>计划号：</th>
+                        <td>JHH1001</td>
+                        <th>项目编码：</th>
+                        <td>XM1001526</td>
+                    </tr>
+                    <tr>
+                    	<th>物料用途：</th>
+                        <td colspan="5">一般用途</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="contentText" border="1" cellspacing="0" cellpadding="0">
+            	<tbody>
+                    <tr class="menuText list_head">
+                        <th class="">序号</th>
+                        <th class="">物料编码</th>
+                        <th class="">物料名称</th>
+                        <th class="">物料类型</th>
+                        <th class="">规格型号</th>
+                        <th class="" style="width: 120px;">物料包装单位</th>
+                        <th class="">数量</th>
+                        <th class="" style="width: 120px;">物料使用单位</th>
+                        <th class="">数量</th>
+                        <th class="">仓库</th>
+                        <th class="">库位</th>
+                        <th class="">备注</th>
+                    </tr>
+                </tbody>
+                <tbody class="tablelist">
+                    <tr class="listTableText list_list">
+                        <td>1</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>2</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>3</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>4</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>5</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>6</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>7</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>8</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>9</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td>10</td>
+                        <td>2100104</td>
+                        <td>电阻器</td>
+                        <td>电阻器</td>
+                        <td>16K</td>
+                        <td>盒</td>
+                        <td>10</td>
+                        <td>个</td>
+                        <td>100</td>
+                        <td>仓库一</td>
+                        <td>库位一</td>
+                        <td>一盒100个</td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                    	<td>小计</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>100</td>
+                        <td></td>
+                        <td>1000</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                    	<td>合计</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>100</td>
+                        <td></td>
+                        <td>1000</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="listTableText list_list">
+                        <td></td>
+                    	<td>制单员</td>
+                        <td colspan="2">XXX</td>
+                        <td>审核人</td>
+                        <td colspan="3">XXX</td>
+                        <td>入库员</td>
+                        <td colspan="3">XXX</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="sureBtn">
+            	<a href="" class="bgd_blue_two">确定</a> 
+				<a href="" class="bgd_white_two">返回</a> 
+            </div>
+		</div>
+	</body>
+</html>

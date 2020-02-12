@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>错误页面展示</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../css/error_page.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<img class="icon_sorry" src="../../img/error/error11.png"/>
+			<div class="error_area">
+				<p class="error_text1">抱歉，您想要查找的页面有误或是不存在哦 ~</p>
+				<p class="error_text2">请检查地址栏中的输入是否错误或者是它有可能已经过期啦</p>
+				<a class="error_info">查看详细错误信息</a>
+				<div class="error_explain">
+					<h5>用户信息</h5>
+					<p class="error_text3">账号：null</p>
+					<p class="error_text3">访问的路径：/</p>
+					<h5>异常信息</h5>
+					<p class="error_text3">class cn.com.smt.util.BusinessException：[E0001]对象为空，请联系磐基新能源工程师！</p>
+				</div>
+				<!-- 返回按钮 -->
+				<div class="back_btn">
+					<a href="welcome.html" target="welcomeFrame">返回首页</a>
+					<a>返回上一页</a>
+				</div>
+			</div>
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		
+		$(".error_info").click(function(){
+			$(".error_explain").slideToggle();
+		});
+	</script>
+</html>

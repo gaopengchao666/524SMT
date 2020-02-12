@@ -1,0 +1,161 @@
+.wrap{
+	width: 17.3%;
+	/*background: url(../img/left/black3.png);
+	background-size: 100% 100%;*/
+	background: rgb(231, 244, 250);
+	border-right: 3px solid rgb(200, 220, 245);
+	box-sizing: border-box;
+}
+/*----- 系统功能菜单 -----*/
+.remind{
+	width: 100%;
+	height: 35px;
+	color: rgb(30, 30, 30);
+	font-size: 15px;
+	line-height: 35px;
+	text-align: center;
+	
+	background: rgb(130, 200, 240);
+}
+.remind img{
+	vertical-align: middle;
+	margin-top: -1px;
+}
+/*----- 菜单树 -----*/
+#tree{
+	overflow: auto;
+}
+/*----- 一级菜单 -----*/
+.level1{
+	width:100%;
+	height:35px;
+	color: rgb(0, 80, 140);
+	display: block;
+	font-size: 15px;
+	text-indent: 1.5em;
+	line-height: 35px;
+	
+	/*background: -webkit-linear-gradient(top,rgb(250, 250, 250),rgb(205, 205, 205));*/
+    background: -webkit-linear-gradient(top,#e6f5fa, #c8dcf5);
+	background: -ms-linear-gradient(top, #e6f5fa 0%, #c8dcf5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#e6f5fa, endColorstr=#c8dcf5,GradientType=0 );
+    
+	
+	/*--- 下边框渐变 ---*/
+    /*-webkit-border-image: -webkit-linear-gradient(left, rgba(210, 210, 210, 1) 1%, rgba(170, 170, 170, 1) 50%, rgba(210, 210, 210, 1) 100%) 0 0 100% 0/0 0 1.5px 0 stretch;*/
+    -webkit-border-image: -webkit-linear-gradient(left, rgba(200, 220, 245, 1) 1%, rgba(170, 170, 170, 1) 50%, rgba(200, 220, 245, 1) 100%) 0 0 100% 0/0 0 1.5px 0 stretch;
+    -ms-border-image: -ms-linear-gradient(left, rgba(200, 220, 245, 1) 1%, rgba(170, 170, 170, 1) 50%, rgba(200, 220, 245, 1) 100%) 0 0 100% 0/0 0 1.5px 0 stretch;
+}
+.arrow_bg{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/left/bg_btn.png) no-repeat;	
+	float: left;
+	margin-left: 15px;
+	margin-top: 6px;
+	position: relative;
+}
+.arrow1{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/left/arrow_down.png) no-repeat;	
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+.arrow2{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/left/arrow_right.png) no-repeat;	
+	position: absolute;
+	top: 2px;
+	left: 2px;
+}
+/*----- 二级菜单 -----*/
+.newsRemind{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url(../img/left/news.png) !important;
+	background-size: 100% 100% !important;
+	font-size: 8px;
+	text-align: center;
+	line-height: 15px;
+	text-indent: 0px;
+	color: white;
+	margin-left: 10px;
+}
+#tree ul{
+	padding-bottom: 15px;
+	display: none;
+	background: white;
+}
+#tree ul:nth-of-type(1){
+	padding-bottom: 15px;
+	display: block;
+}
+.level2{
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	color: rgb(70, 70, 70);
+	/*text-indent: 3.6rem;*/
+	font-size: 12px;
+    /*-webkit-border-image: -webkit-linear-gradient(left, transparent 10%,rgba(100, 100, 100, 1) 50%,transparent 90%) 0 0 100% 0/0 0 0.5px 0 stretch;*/
+    -webkit-border-image: -webkit-linear-gradient(left, transparent 8%,rgba(213, 228, 255, 1) 50%,transparent 92%) 0 0 100% 0/0 0 0.5px 0 stretch;
+}
+.level2:hover{
+	/*border-left: 3px solid rgb(22, 162, 242);*/
+	/*box-sizing: border-box;*/
+	/*background: rgb(20, 20, 20);*/
+	background: rgb(130, 200, 240);
+	/*text-indent: 3.4rem;*/
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+}
+.level2 .left_file{
+	margin-left: 35px;
+	margin-right: 10px;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/left/file11.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: 0px 2px;
+}
+.level2:hover .left_file{
+	background: url(../img/left/file22.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: 1px 2px;
+}
+.menu_selected{
+	background: rgb(130, 200, 240);
+	color: white;
+}
+.menu_selected_icon{
+	background: url(../img/left/file22.png) no-repeat;
+	background-size: 100% 100%;
+	background-position: 1px 2px;
+}
+/*------------ 设置滚动条 -----------*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+#tree::-webkit-scrollbar{  
+    width: 14px;  
+    background-color: rgb(242, 249, 255);  
+}    
+/*定义滚动条轨道 内阴影+圆角*/  
+#tree::-webkit-scrollbar-track{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    /*border-radius: 10px;*/  
+    background-color: rgb(242, 249, 255); 
+}  
+/*定义滑块 内阴影+圆角*/  
+#tree::-webkit-scrollbar-thumb{  
+    /*border-radius: 10px;*/  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    background-color: rgb(230, 230, 230);
+}

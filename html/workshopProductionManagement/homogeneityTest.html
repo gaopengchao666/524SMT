@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>齐套检查</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：车间生产管理 > 生产计划管理 > 齐套检查</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>车间生产计划信息列表</span></h4>
+                    	<div class="operate_area">
+                            <a onclick="homogeneityCheck();" class="bgd_blue_four img_hand">齐套检查</a> 
+                            <a href="productionScheduling.html" class="bgd_white_two img_hand">排产</a> 
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">计划号</th>
+                                        <th class="">产品图号</th>
+                                        <th class="">产品名称</th>
+                                        <th class="">项目编码</th>
+                                        <th class="">计划数量</th>
+                                        <th class="">完工数量</th>
+                                        <th class="">计划开始时间</th>
+                                        <th class="">计划结束时间</th>
+                                        <th class="">实际开始时间</th>
+                                        <th class="">实际结束时间</th>
+                                        <th class="">完工进度</th>
+                                        <th class="">车间工单状态</th>
+                                        <th class="">备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>JHSAD8</td>
+                                        <td>IMAGE01</td>
+                                        <td>产品一</td>
+                                        <td>项目一</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>2018-05-06</td>
+                                        <td>2018-05-26</td>
+                                        <td>尚未开始</td>
+                                        <td>尚未开始</td>
+                                        <td>0%</td>
+                                        <td>未开工</td>
+                                        <td>部分排产</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工艺文件信息列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">工艺文件名称</th>
+                                        <th class="">工艺流转卡名称</th>
+                                        <th class="">工艺PBOM名称</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>DFSGR1564</td>
+                                        <td>DSRW1542</td>
+                                        <td>GYDFG121211</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工具信息</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">丝网编号</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>SWBHFGSW4352451</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工序齐套列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">工序编号</th>
+                                        <th class="">工序名称</th>
+                                        <th class="">齐套状态</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>PCB001</td>
+                                        <td>PCB准备</td>
+                                        <td>已齐套</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>PCB001</td>
+                                        <td>PCB准备</td>
+                                        <td>已齐套</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>PCB001</td>
+                                        <td>PCB准备</td>
+                                        <td>已齐套</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>PCB001</td>
+                                        <td>PCB准备</td>
+                                        <td>已齐套</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>PCB001</td>
+                                        <td>PCB准备</td>
+                                        <td>已齐套</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 补料清单弹框 -->
+			<div class="mask hidden">
+				<div class="supplyDiv">
+					<h4 class="processTitle">
+						补料清单
+						<img onclick="backsupply();" src="../../img/list/delete.png"/>
+					</h4>
+					<!--<div class="list_area">-->
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">补料申请单号</th>
+                                        <td>BL1255001</td>
+                                        <th class="">计划号</th>
+                                        <td>JH154001</td>
+                                        <th class="">产品图号</th>
+                                        <td>IMAGE001</td>
+                                    </tr>
+                                    <tr class="menuText list_head">
+                                        <th class="">产品名称</th>
+                                        <td>产品一</td>
+                                        <th class="">申请时间</th>
+                                        <td>2018-05-06</td>
+                                        <td colspan="2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody class="tablelist">
+                                	<tr class="menuText list_head">
+                                        <th>物料编码</th>
+                                        <th>物料名称</th>
+                                        <th>规格型号</th>
+                                        <th>需求数量</th>
+                                        <th>计量单位</th>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>WL01001001</td>
+                                        <td>纳米材料</td>
+                                        <td>C151</td>
+                                        <td>50</td>
+                                        <td>包</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>WL01001001</td>
+                                        <td>纳米材料</td>
+                                        <td>C151</td>
+                                        <td>50</td>
+                                        <td>包</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>WL01001001</td>
+                                        <td>纳米材料</td>
+                                        <td>C151</td>
+                                        <td>50</td>
+                                        <td>包</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>WL01001001</td>
+                                        <td>纳米材料</td>
+                                        <td>C151</td>
+                                        <td>50</td>
+                                        <td>包</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>WL01001001</td>
+                                        <td>纳米材料</td>
+                                        <td>C151</td>
+                                        <td>50</td>
+                                        <td>包</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 确定按钮 -->
+	                        <div class="certainBtn">
+	                        	<a href="" class="bgd_blue_two img_hand">确定</a> 
+	                            <a href="" class="bgd_white_two img_hand">取消</a> 
+	                        </div>
+                        </div>
+                    <!--</div>-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/common/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		// 点击弹框关闭按钮
+		function backsupply(){
+			$(".mask").css("display", "none");
+		}
+		
+		// 点击齐套检查
+		function homogeneityCheck(){
+			confirm("缺少工艺文件，请先设定工艺文件",function(){
+				$(".mask").css("display", "block");
+			});
+			$(".mask").css("display", "block");
+		}
+	</script>
+</html>

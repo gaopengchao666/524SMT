@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改用户</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：权限管理 > 用户管理 > 修改用户信息</span></p>
+	            
+			    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+			            <!------- 内容 ------->
+			            <div class="content content1">
+			                <!-- 用户列表内容区 -->
+			                <div class="con con_01">
+			                    <!-- 表单信息填写区 -->
+			                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>修改用户信息</span><span class="necessary">（带*号为必填项）</span></h4>
+			                    <div class="write_area">
+			                        <form id="addFrom" action="" method="post">
+			                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%">
+			                                <tbody>
+			                                    <tr>  
+			                                        <th>用户名：</th>
+			                                        <td>
+			                                        	<input id="" name="" type="text" value="小张"> <span class="redColor">*</span>
+			                                        </td>
+			                                        <th>所属机构：</th>
+			                                        <td>
+			                                        	<select name="">
+			                                        		<option value="">总装中心</option>
+			                                        		<option value="">热控产品事业部</option>
+			                                        		<option value="">结构产品事业部</option>
+			                                        	</select> <span class="redColor">*</span>
+			                                        </td>
+			                                        <th>公司邮箱：</th>
+			                                        <td>
+			                                        	<input type="email" name="" id="" value="15826435971@163.com" />
+			                                        </td>
+			                                        <td rowspan="3">
+			                                        	<b>上传头像：</b> <span class="redColor">*</span>
+			                                        	<div class="uploadImg clear">
+				                                        	<img src="../../img/list/uploadimg.png"/>
+				                                        	<input type="file" name="" id="" value="" />
+			                                        	</div>
+			                                        </td>
+			                                    </tr>
+			                                    <tr>
+			                                        <th>联系电话：</th>
+			                                        <td>
+			                                        	<input id="" name="" class="overLine" type="tel" value="15826435971">
+			                                        </td>
+			                                        <th>登录密码：</th>
+			                                        <td>
+			                                        	<input type="password" name="" id="" value="123456" /> <span class="redColor">*</span>
+			                                        </td>
+													<th>入职日期：</th>
+			                                       <td class="addRemind"><input class="hiredate" name="hiredate" readonly="readonly"
+												id="hiredate" value="" /></td>
+			                                    </tr>
+			                                    <tr>
+			                                    	<th>政治面貌：</th>
+			                                    	<td colspan="5" class="input_politics">
+			                                    		<input type="radio" name="politics" id="" value="团员" checked="checked"/><label><img src="../../img/list/politics1.png"/></label>
+			                                    		<input type="radio" name="politics" id="" value="党员" /><label><img src="../../img/list/politics2.png"/></label>
+			                                    		<input type="radio" name="politics" id="" value="群众" /><label><img src="../../img/list/politics3.png"/></label> <span class="redColor">*</span>
+			                                    	</td>
+			                                    </tr>
+			                                    <tr>
+			                                        <th>所属用户组：</th>
+			                                        <td colspan="6" class="clear" style="position : relative;height: 50px;">
+			                                        		<div id="div1">
+															<span><input id="groupNames1" name="groupNames" class="input_checkBox" type="checkbox" value="车间主管/副主管" checked="checked"><label for="groupNames1">车间主管</label></span>
+															<span><input id="groupNames2" name="groupNames" class="input_checkBox" type="checkbox" value="工艺工程师"><label for="groupNames2">工艺工程师</label></span>
+															<span><input id="groupNames3" name="groupNames" class="input_checkBox" type="checkbox" value="车间库管员"><label for="groupNames3">车间库管员</label></span>
+															<span><input id="groupNames4" name="groupNames" class="input_checkBox" type="checkbox" value="车间调度员"><label for="groupNames4">生产人员</label></span>
+															<span><input id="groupNames5" name="groupNames" class="input_checkBox" type="checkbox" value="物料配送员"><label for="groupNames5">工序检验员</label></span>
+															<span><input id="groupNames6" name="groupNames" class="input_checkBox" type="checkbox" value="系统管理员"><label for="groupNames6">计划/调度</label></span>
+															<span><input id="groupNames7" name="groupNames" class="input_checkBox" type="checkbox" value="安全保密员"><label for="groupNames7">厂长</label></span>
+															<span><input id="groupNames8" name="groupNames" class="input_checkBox" type="checkbox" value="安全审计员"><label for="groupNames8">系统管理员</label></span>
+															<span class="redColor">*</span>
+			                                        	</div> 
+			                                        </td>
+			                                    </tr>
+			                                </tbody>
+			                            </table>
+			                        </form>
+			                        <!-- 保存、重置按钮区 -->
+			                        <div align="center" class="btn_submit">
+			                            <a href="userList.html" class="bgd_blue_two img_hand contentText">确定</a>
+			                            <a href="userList.html" class="bgd_white_two img_hand"> 返回 </a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+	            
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-1.9.1.min.js"></script>
+    <script src="../../js/3rd/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$(".info_area td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		$(function(){
+        $("#hiredate").datepicker({
+        	dateFormat : 'yy-mm-dd',
+            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+ 		 	changeYear:true,
+ 		 	changeMonth:true,
+ 		 	showOn:"button",
+ 		 	buttonImage:"../../img/button/calendar.png",
+ 		 	buttonImageOnly:false
+        });
+     });
+	</script>
+</html>

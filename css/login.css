@@ -1,0 +1,232 @@
+body{
+	min-width: 1200px;
+	background: url(../img/login/background_big.jpg) repeat-x !important;
+}
+/*---------- 鐧诲綍鑳屾櫙鍥�----------*/
+.wrap{
+	width: 1200px;
+	height: 761px;
+	margin: 0px auto;
+	margin-top: -8px;
+	background: url(../img/login/background_small.jpeg) no-repeat;
+	position: relative;
+}
+.logo2{
+	width: 100%;
+	text-align: center;
+}
+.logo2 img{
+	border: none;
+	display: block;
+	margin: 0px auto;
+	position: relative;
+	top: 60px;
+}
+/*---------- 涓棿鍐呭妗�----------*/
+.content{
+	width: 422px;
+	height: 300px;
+	border-radius: 10px;
+	position: absolute;
+	top: 210px;
+	left: 393px;
+}
+/*-------- logo --------*/
+.logo img{
+	height: 100px;
+	border: none;
+	display: block;
+	margin: 0px auto;
+	margin-top: 10px;
+	border: 0;
+}
+/*-------- 杈撳叆妗�--------*/
+.write{
+	position: relative;
+	top: 10px;
+}
+label{
+	display: inline-block;
+	width: 65px;
+	margin-left: 60px;
+	/*border: 1px solid red;*/
+}
+/*label:nth-child(1){
+	margin-top: 20px;
+}*/
+.write input{
+	outline: none;
+	/* border: 1px solid rgb(180, 212, 255); */
+	width: 200px;
+	height: 25px;
+	border-radius: 5px;
+	text-indent: 2em;
+	border:none;
+	line-height: 25px;
+}
+.write img{
+	border: none;
+	position: relative;
+	left: 25px;
+	top: 5px;
+}
+
+/*-------- 鎸夐挳鍖�--------*/
+.button{
+	margin-top: 30px;
+	text-align: center;
+}
+button{
+	border: none;
+	background:none;
+	outline:none;
+}
+/*.button input{
+	width: 60px !important;
+	height: 25px !important;
+	background: rgb(68, 161, 248);
+	border: none;
+	border-radius: 3px;
+	margin: 0px 20px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-indent: 0em;
+} 
+.button input:hover{
+	cursor: pointer;
+	background: rgb(68, 130, 255);
+}*/
+/*-------- 鐗堝熬鍖�--------*/
+.bottom{
+	position: absolute;
+	top: 600px;
+	left: 450px;
+	text-align: center;
+	font-size: 12.8px;
+}
+
+
+/*------- input銆乻elect銆乼extarea鏍峰紡 ------*/
+input, select{
+	width: 200px;
+	height: 20px;
+	border: none;
+	border: 1px solid rgb(220, 220, 220); 
+	/* background: rgb(245, 249, 255); */
+	border-radius: 3px;
+	line-height: 18px;
+	font-size: 14px;
+}
+button{
+	border: none;
+	background:none;
+}
+/*------- 褰撳墠鎸夐挳鑳屾櫙绾摑鑹�------*/
+.btn_blank{
+	background: rgb(68, 161, 248) !important;
+	color: white;
+	border-radius: 3px;
+	margin: 4px 5px !important;
+}
+/*------- 鏈�鎷╂寜閽儗鏅函鐧借壊 ------*/
+.btn_noSelect{
+	background: rgb(255, 255, 255) !important;
+	color: black !important;
+	border-radius: 3px;
+	margin: 4px 5px !important;
+}
+
+.bgd_blue_two
+{
+	background:url(../img/button/bgd_blue_two.png);
+	 display:inline-block;
+	 font-size:14px;
+	 width:50px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:white;
+}
+
+.bgd_white_two
+{
+	background:url(../img/button/bgd_white_two.png);
+	 display:inline-block;
+	 font-size:14px;
+	 width:50px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+}
+
+.bgd_white_three
+{
+	background:url(../img/button/bgd_white_three.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+	 margin-bottom: 10px;
+}
+.bgd_white_four
+{
+	background:url(../img/button/bgd_white_four.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:70px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:blue !important;
+	 margin-bottom: 10px;
+}
+.bgd_blue_four
+{
+	background:url(../img/button/bgd_blue_four.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:70px;
+	 height:22px;
+	 text-align:center;
+	 line-height:22px;
+	 margin-left:20px;
+	 color:black !important;
+	 margin-bottom: 10px;
+}
+.img_hand:hover{
+	cursor:pointer;
+}
+#uname{
+	background:url(../img/login/input_username.png) no-repeat;
+}
+#password{
+	background:url(../img/login/input_password.png) no-repeat;
+}
+#uname1{
+	background:url(../img/login/input_username.png) no-repeat;
+}
+#password1{
+	background:url(../img/login/input_password.png) no-repeat;
+}
+#password2{
+	background:url(../img/login/input_password.png) no-repeat;
+}
+.checkUsername, .checkPassword{
+	height: 20px;
+	padding: 0;
+	margin: 0;
+}
+#login1{
+	color: white !important;
+}
+.hidden{
+	display: none;
+}

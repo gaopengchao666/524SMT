@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrap{
+	height: 100px;
+	margin: 0px auto;
+	/*background-image: url(../img/top/bg_top.png);
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/top/bg_top.png',sizingMethod='scale');
+	*/
+	background: -webkit-linear-gradient(top,#dee9fc,#66c2e2);
+	background: -ms-linear-gradient(top, #dee9fc 0%,#66c2e2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#dee9fc, endColorstr=#66c2e2,GradientType=0 );
+    
+	position: relative;
+}
+/*-------- 宸﹁竟logo鍖� -------*/
+.logo{
+	height: 100px;
+	overflow: hidden;
+	margin-left: 10px;
+}
+.logo1{
+	height: 110px;
+	margin-top: -5px;
+}
+/*-------- 宸﹁竟logo鍖� -------*/
+.nav{
+	/* width: 550px; */
+	height: 80px;
+	margin-right: 10px;
+}
+.nav ul li{
+	width: 60px;
+	height: 60px;
+	/*background: url(../img/top/border3.png);*/
+	/*background-color: rgb(248, 248, 248);*/
+	/*background-size: 100% 100%;*/
+	float: right;
+	margin: 10px 15px;
+	border-radius: 3px;
+}
+ /*.nav ul li:nth-child(1){
+	background: rgba(250, 250, 250, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFAFAFA,endColorstr=#7FFAFAFA);
+	border-radius: 3px;
+} */
+.backgroundTab{
+	background: rgba(250, 250, 250, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFAFAFA,endColorstr=#7FFAFAFA);
+	border-radius: 3px;
+}
+.nav ul li:hover{
+	box-shadow:0px 0px  10px 5px rgb(180, 180, 180);    
+}
+.nav ul li a{
+	display: block;
+}
+.nav ul li img{
+	margin-top: 2px;
+	margin-left: 10px;
+}
+.nav ul li p{
+	font-size: 12px;
+	font-weight: bolder;
+	text-align: center;
+	margin-top: -2px;
+}
+/*-------- 用户名、时间 -------*/
+.marquee{
+	width: 500px;
+	height: 20px;
+	/* background: rgba(255, 255, 255, 0.3);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cffffff,endColorstr=#4cffffff); */
+	font-size: 11px !important;
+	font-weight: bolder;
+	line-height: 20px;
+	color: #ffffff;
+	position: absolute;
+	bottom: 5px;
+	right: 30px;
+	text-align: right;
+} 
+.marquee span{
+	font-size: 11px !important;
+	font-weight: bolder;
+	line-height: 20px;
+	color: #ffffff;
+} 

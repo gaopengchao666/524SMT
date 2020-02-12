@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改项目信息</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：生产基础信息管理 > 项目信息管理 > 修改项目信息</span></p>
+			    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+			            <!------- 内容 ------->
+			            <div class="content content1">
+			                <!-- 用户列表内容区 -->
+			                <div class="con con_01">
+			                    <!-- 表单信息填写区 -->
+			                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>填写项目信息</span><span class="necessary">（带*号为必填项）</span></h4>
+			                    <div class="write_area">
+			                        <form id="addFrom" action="" method="post">
+			                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%">
+			                                <tbody>
+			                                    <tr>
+			                                        <th>项目编码：</th>
+			                                        <td>
+			                                        	<input id="" name="" type="text" value="PRO001"> <span class="redColor">*</span>
+			                                        </td>
+			                                        <th>项目名称：</th>
+			                                        <td>
+			                                        	<input type="text" name="" id="" value="项目一" /> 
+			                                        </td>
+			                                        <th>项目来源：</th>
+			                                        <td>
+			                                        	<input type="text" name="" id="" value="DSFSFDF" /> <span class="redColor">*</span>
+			                                        </td>
+			                                    </tr>
+			                                    <tr>
+			                                        <th>产品图号：</th>
+			                                        <td>
+			                                        	<input type="text" name="" id="" value="IMAGE1" /> <span class="redColor">*</span>
+			                                        </td>
+			                                        <th>产品名称：</th>
+			                                        <td colspan="3">
+			                                        	<input type="text" name="" id="" value="产品一" /> <span class="redColor">*</span>
+			                                        </td>
+			                                    </tr>
+			                                    <tr>
+			                                        <th>备注：</th>
+			                                        <td colspan="5">
+			                                        	<textarea style="width: 95%;height: 100px;">备注信息1</textarea>
+			                                        </td>
+			                                    </tr>
+			                                </tbody>
+			                            </table>
+			                        </form>
+			                        <!-- 保存、重置按钮区 -->
+			                        <div align="center" class="btn_submit">
+			                            <a href="itemInfoManagement.html" class="bgd_blue_two img_hand contentText">确定</a>
+			                            <a href="itemInfoManagement.html" class="bgd_white_two img_hand"> 返回 </a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+	</script>
+</html>

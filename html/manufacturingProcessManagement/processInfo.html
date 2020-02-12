@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工艺流程详情</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：生产工艺管理 > 工艺流程详情</span></p>
+
+				<!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>EBOM信息</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	<table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                                <tr class="menuText list_head">
+                                    <th>产品名称：</th>
+                                    <td>XXXX</td>
+                                    <th>产品图号：</th>
+                                    <td>IMAGE01</td>
+                                </tr>
+                        	</table>
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tr class="menuText list_head">
+                                    <th>物料编码</th>
+                                    <th>物料名称</th>
+                                    <th>物料规格型号</th>
+                                    <th>物料用途</th>
+                                    <th>供应商</th>
+                                    <th>单位</th>
+                                    <th>数量</th>
+                                    <th>备注</th>
+                                </tr>
+                                <tr class="listTableText list_list">
+                                    <td>1001001</td>
+                                    <td>电阻器</td>
+                                    <td>16K</td>
+                                    <td>一般用途</td>
+                                    <td>西安供应商</td>
+                                    <td>卷</td>
+                                    <td>100</td>
+                                    <td>一包10卷</td>
+                                </tr>
+                                <tr class="listTableText list_list">
+                                    <td>1001001</td>
+                                    <td>电阻器</td>
+                                    <td>16K</td>
+                                    <td>一般用途</td>
+                                    <td>西安供应商</td>
+                                    <td>卷</td>
+                                    <td>100</td>
+                                    <td>一包10卷</td>
+                                </tr>
+                                <tr class="listTableText list_list">
+                                    <td>1001001</td>
+                                    <td>电阻器</td>
+                                    <td>16K</td>
+                                    <td>一般用途</td>
+                                    <td>西安供应商</td>
+                                    <td>卷</td>
+                                    <td>100</td>
+                                    <td>一包10卷</td>
+                                </tr>
+                                <tr class="listTableText list_list">
+                                    <td>1001001</td>
+                                    <td>电阻器</td>
+                                    <td>16K</td>
+                                    <td>一般用途</td>
+                                    <td>西安供应商</td>
+                                    <td>卷</td>
+                                    <td>100</td>
+                                    <td>一包10卷</td>
+                                </tr>
+                                <tr class="listTableText list_list">
+                                    <td>1001001</td>
+                                    <td>电阻器</td>
+                                    <td>16K</td>
+                                    <td>一般用途</td>
+                                    <td>西安供应商</td>
+                                    <td>卷</td>
+                                    <td>100</td>
+                                    <td>一包10卷</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>PBOM信息</span></h4>
+                		
+                        <!-- 操作类型区 -->
+                        <div class="operate_area">
+                            <a onclick="addDetail1()" class="bgd_add img_hand">增加</a> 
+                            <a onclick="deleteDetail1()" class="bgd_delete img_hand">删除</a> 
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	<table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="margin-bottom: 10px;">
+                                <tr class="menuText list_head">
+                                    <th>产品名称：</th>
+                                    <td><input type="text" name="" value="XXXX" /></td>
+                                    <th>产品图号：</th>
+                                    <td><input type="text" name="" value="IMAGE01" /></td>
+                                </tr>
+                        	</table>
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="checkSelectAll"></th>
+                                        <th class="">工序编号</th>
+                                        <th class="">工序名称</th>
+                                        <th class="">物料编码</th>
+                                        <th class="">物料名称</th>
+                                        <th class="">物料规格型号</th>
+                                        <th class="">物料用途</th>
+                                        <th class="">供应商</th>
+                                        <th class="">单位</th>
+                                        <th class="">数量</th>
+                                        <th class="">备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr3">
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value="01"></td>
+                                        <td><input type="text" name="" id="" value="1" /></td>
+                                        <td><input type="text" name="" id="" value="PCB准备" /></td>
+                                        <td><input type="text" name="" id="" value="1001001" /></td>
+                                        <td><input type="text" name="" id="" value="电阻器" /></td>
+                                        <td><input type="text" name="" id="" value="5K" /></td>
+                                        <td><select name="">
+                                        	<option value="">一般用途</option>
+                                        	<option value="">特殊用途</option>
+                                        </select></td>
+                                        <td><input type="text" name="" id="" value="西安供应商" /></td>
+                                        <td><input type="text" name="" id="" value="卷" /></td>
+                                        <td><input type="text" name="" id="" value="100" /></td>
+                                        <td><input type="text" name="" id="" value="一盒100个" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 确定按钮 -->
+                        <div class="certainBtn">
+                        	<a href="processList.html" class="bgd_blue_two img_hand">确定</a> 
+                            <a href="" class="bgd_white_two img_hand">重置</a> 
+                        </div>
+	                    <!-- 页码区域 -->
+	                    <div class="page_area contentText clear">
+	                    	<div class="page_sum">
+	                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+	                    	</div>
+	                        <div class="page_jump">
+	                        	<span>跳转到&emsp;第</span>
+	                        	<input type="text" name="" id="" value="" />
+	                        	<span>页&emsp;</span>
+	                        	<button>Go</button>
+	                        </div>
+	                        <div class="page-pull-right async-page">
+	                            <button>上一页</button>
+	                            <button class="select_page">1</button>
+	                            <button>2</button>
+	                            <button>3</button>
+	                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+	                            <button>98</button>
+	                            <button>99</button>
+	                            <button>100</button>
+	                            <button>下一页</button>
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr3 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		//-------- 增加明细 ---------
+	    function addDetail1() {
+	        
+	        var dom = "<tr class='contentText list_list'><td><input type='checkbox' class='input_checkBox' name='' id='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><select name=''><option value=''>一般用途</option><option value=''>特殊用途</option></select></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td></tr>";
+	        
+	        $("#addTr3").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail1() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr3").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+	</script>
+</html>

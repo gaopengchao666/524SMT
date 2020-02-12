@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加机损补料单</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存日常管理 > 添加机损补料单</span></p>
+	            
+		    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+		            <!------- 内容 ------->
+		            <div class="content content1">
+		            	<!-- 用户列表内容区 -->
+		                <div class="con con_01">
+		                    <!-- 表单信息填写区 -->
+		                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>新建机损补料单</span></h4>
+		                    <div class="write_area">
+		                        <form id="addFrom" action="" method="post">
+		                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%" style="margin-bottom: 10px;">
+		                                <tbody>
+		                                    <tr>
+		                                        <th>机损单号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>计划号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>产品图号：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>项目编码：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>工序名称：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>申请日期：</th>
+		                                        <td><input type="date" name="" value="" /></td>
+		                                    </tr>
+		                                    <tr>
+		                                        <th>制单人：</th>
+		                                        <td><input type="text" name="" value="" /></td>
+		                                        <th>审核人：</th>
+		                                        <td colspan="3"><input type="text" name="" value="" /></td>
+		                                    </tr>
+		                                </tbody>
+		                            </table>
+		                        </form>
+		                    </div>
+		                </div>
+						<!-- 列表展示区 -->
+						<div class="table_border">
+			                <div class="show_list">
+			                	<div class="title_operate">
+			                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>机损补料单</span></h4>
+			                		
+			                        <!-- 操作类型区 -->
+			                        <div class="operate_area" id="addOperate">
+			                            <a id="addDetail" onclick="addDetail()" class="bgd_add img_hand">增加</a> 
+			                            <a id="deleteDetail" onclick="deleteDetail()" class="bgd_delete img_hand">删除</a> 
+			                        </div>
+			                	</div>
+			                	<div class="list_area">
+			                        <!-- 信息列表区 -->
+			                        <div class="info_area">
+			                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+			                                <tbody>
+			                                    <tr class="menuText list_head">
+			                                        <th class="">序号</th>
+			                                        <th class="">物料编码</th>
+			                                        <th class="">物料名称</th>
+			                                        <th class="">物料类型</th>
+			                                        <th class="">规格型号</th>
+			                                        <th class="">物料包装单位</th>
+			                                        <th class="">数量</th>
+			                                        <th class="">物料使用单位</th>
+			                                        <th class="">数量</th>
+			                                        <th class="">仓库</th>
+			                                        <th class="">库位</th>
+			                                        <th class="">备注</th>
+			                                    </tr>
+			                                </tbody>
+			                                <tbody class="tablelist" id="addTr">
+			                                    <tr class="listTableText list_list">
+			                                        <td><input type="text" name="" value="0" /></td>
+			                                        <td><input type="text" name="" value="2100104" /></td>
+			                                        <td><input type="text" name="" value="电阻器" /></td>
+			                                        <td><input type="text" name="" value="5K电阻器" /></td>
+			                                        <td><input type="text" name="" value="5K" /></td>
+			                                        <td><input type="text" name="" value="盒" /></td>
+			                                        <td><input type="text" name="" value="10" /></td>
+			                                        <td><input type="text" name="" value="个" /></td>
+			                                        <td><input type="text" name="" value="100" /></td>
+			                                        <td><input type="text" name="" value="仓库一" /></td>
+			                                        <td><input type="text" name="" value="库位一" /></td>
+			                                        <td><input type="text" name="" value="一盒500个" /></td>
+			                                    </tr>
+			                                </tbody>
+			
+			                            </table>
+			                        </div>
+			                        <!-- 确定按钮 -->
+			                        <div class="certainBtn">
+			                        	<a href="" class="bgd_blue_two img_hand">确定</a> 
+			                            <a href="wastageSupplyList.html" class="bgd_white_two img_hand">返回</a> 
+			                        </div>
+			                    </div>
+			                </div>
+						</div>
+		            </div>
+		        </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#metailInfo td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");  
+			}
+		);
+		
+		//-------- 增加明细 ---------
+	    function addDetail() {
+	        
+	        var dom = "<tr class='contentText list_list'><td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td></tr>";
+	        
+	        $("#addTr").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+	</script>
+</html>

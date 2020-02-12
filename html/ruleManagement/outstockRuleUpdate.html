@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>物料出库规则</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存规则管理 > 物料出库规则 > 修改物料出库规则</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>出库规则详情</span></h4>
+                    	<!-- 操作类型区 -->
+                        <div class="operate_area" id="addOperate">
+                            <a href="" class="bgd_blue_two img_hand">保存</a> 
+                            <a href="outstockRuleList.html" class="bgd_white_two img_hand">返回</a>
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="checkSelectAll"></th>
+                                        <th class="">规则名称</th>
+                                        <th class="">仓库名称</th>
+                                        <th class="">物料类型</th>
+                                        <th class="">物料编码</th>
+                                        <th class="">物料名称</th>
+                                        <th class="">物料规格型号</th>
+                                        <th class="">计量单位</th>
+                                        <th class="">第一优先级</th>
+                                        <th class="">第二优先级</th>
+                                        <th class="">第三优先级</th>
+                                        <th class="">备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr1">
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value="" /></td>
+                                        <td><input type="text" name="" id="" value="规则1" /></td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">盘状物料库</option>
+                                        		<option value="">仓库二</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="标准件" /></td>
+                                        <td><input type="text" name="" id="" value="BS0100025" /></td>
+                                        <td><input type="text" name="" id="" value="半圆头螺钉" /></td>
+                                        <td><input type="text" name="" id="" value="818 M5?2" /></td>
+                                        <td><input style="width: 50px;" type="text" name="" id="" value="个" /></td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">散包先出</option>
+                                        		<option value="">先入后出</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">后入先出</option>
+                                        		<option value="">先入先出</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">供应商</option>
+                                        		<option value="">先入先出</option>
+                                        		<option value="">先入后出</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr1 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+	</script>
+</html>

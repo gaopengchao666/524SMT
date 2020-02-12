@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>物料出库规则</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存规则管理 > 物料出库规则 > 添加物料出库规则</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>出库规则详情</span></h4>
+                    	<!-- 操作类型区 -->
+                        <div class="operate_area" id="addOperate">
+                            <a id="addDetail" onclick="addDetail()" class="bgd_add img_hand">增加</a> 
+                            <a id="deleteDetail" onclick="deleteDetail()" class="bgd_delete img_hand">删除</a>
+                            <a href="" class="bgd_blue_two img_hand">保存</a> 
+                            <a href="outstockRuleList.html" class="bgd_white_two img_hand">返回</a> 
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                        	
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="checkSelectAll"></th>
+                                        <th class="">规则名称</th>
+                                        <th class="">仓库名称</th>
+                                        <th class="">物料类型</th>
+                                        <th class="">物料编码</th>
+                                        <th class="">物料名称</th>
+                                        <th class="">物料规格型号</th>
+                                        <th class="">计量单位</th>
+                                        <th class="">第一优先级</th>
+                                        <th class="">第二优先级</th>
+                                        <th class="">第三优先级</th>
+                                        <th class="">备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="addTr1">
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value="" /></td>
+                                        <td><input type="text" name="" id="" value="" /></td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">选择仓库</option>
+                                        		<option value="">湿敏元件库</option>
+                                        		<option value="">图纸库</option>
+                                        		<option value="">丝网库</option>
+                                        		<option value="">盘状物料库</option>
+                                        		<option value="">其它仓库</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<input type="text" name="" id="" value="" />
+                                        </td>
+                                        <td>
+                                        	<input type="text" name="" id="" value="" />
+                                        </td>
+                                        <td><input type="text" name="" id="" value="" /></td>
+                                        <td><input type="text" name="" id="" value="" /></td>
+                                        <td><input style="width: 50px;" type="text" name="" id="" value="" /></td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">请选择</option>
+                                        		<option value="">先入先出</option>
+                                        		<option value="">先入后出</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">请选择</option>
+                                        		<option value="">先入后出</option>
+                                        		<option value="">先入先出</option>
+                                        	</select>
+                                        </td>
+                                        <td>
+                                        	<select name="" class="selectWidth">
+                                        		<option value="">请选择</option>
+                                        		<option value="">供应商</option>
+                                        		<option value="">先入先出</option>
+                                        		<option value="">先入后出</option>
+                                        	</select>
+                                        </td>
+                                        <td><input type="text" name="" id="" value="" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#addTr1 td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		//-------- 增加明细 ---------
+	    function addDetail() {
+	        
+	        var dom = "<tr class='contentText list_list'><td><input class='input_checkBox' type='checkBox' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><select name='' class='selectWidth'><option value=''>选择仓库</option><option value=''>仓库一</option><option value=''>仓库二</option>></select></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input style='width: 50px;' type='text' name='' value=''></td>";
+	        dom += "<td><select name='' class='selectWidth'><option value=''>请选择</option><option value=''>先入先出</option><option value=''>先入后出</option><option value=''>供应商</option></select></td>";
+	        dom += "<td><select name='' class='selectWidth'><option value=''>请选择</option><option value=''>先入后出</option><option value=''>先入先出</option><option value=''>供应商</option></select></td>";
+	        dom += "<td><select name='' class='selectWidth'><option value=''>请选择</option><option value=''>供应商</option><option value=''>先入后出</option><option value=''>先入先出</option></select></td>";
+	        dom += "<td><input type='text' name='' value=''></td></tr>";
+	        
+	        $("#addTr1").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr1").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+	</script>
+</html>

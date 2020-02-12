@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加出库单</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="../../css/layui.css"/>-->
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存日常管理 > 出库管理 > 添加物料出库单</span></p>
+	            
+				<!------ tab标签 ------>
+	            <!--<div class="layui-tab layui-tab-card">
+				    <ul class="layui-tab-title">
+					    <li class="layui-this">新建出库单</li>
+					    <li>审核出库单</li>
+				    </ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">-->
+					    	
+					    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+					            <!------- 内容 ------->
+					            <div class="content content1">
+					            	<!-- 用户列表内容区 -->
+					                <div class="con con_01">
+					                    <!-- 表单信息填写区 -->
+					                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>新建物料出库单</span></h4>
+					                    <div class="write_area">
+					                        <form id="addFrom" action="" method="post">
+					                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%" style="margin-bottom: 10px;">
+					                                <tbody>
+					                                   <tr>
+											<th>出库单号：</th>
+											<td><input type="text" name="outstockOrderCode"
+											readonly="readonly"	id="outstockOrderCode" value="" /></td>
+											<th>计划号：</th>
+											<td><input type="text" name="planNum" id="planNum" value="" /></td>
+											<th>产品图号：</th>
+											<td><input type="text" name="productDrawNo" id="productDrawNo" value="" /></td>
+										</tr>
+										<tr>
+											<th>出库类型：</th>
+											<td>
+											<select type="text" name="outstockType" id="outstockType" value="">
+											   <!-- <option value="生产领料出库">生产领料出库</option> -->
+											   <option value="生产补料出库">生产补料出库</option>
+											   <option value="其它出库">其它出库</option>
+											</select>
+											</td>
+											<th>出库日期：</th>
+											<td><input type="text" name="" value="2018-09-14" id="dateControl" readonly="readonly" /></td>
+											<th>物料用途：</th>
+											<td>
+											<select type="text" name="materialUse" value="">
+											  <option value=""></option>
+													<option value="机载/弹载">机载/弹载</option>
+											</select>
+											</td>
+										</tr>
+										<tr>
+											<th>工序名称：</th>
+											<td><input type="text" name="processName" value="" /></td>
+											<th>项目编码：</th>
+											<td><input type="text" name="projectCode" value="" /></td>
+											<th>制单人：</th>
+											<td><input type="text" name="creator"
+												value="admin" /></td>
+										</tr>
+					                                </tbody>
+					                            </table>
+					                        </form>
+					                    </div>
+					                </div>
+									<!-- 列表展示区 -->
+									<div class="table_border">
+						                <div class="show_list">
+						                	<div class="title_operate">
+						                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>物料出库单</span></h4>
+						                		
+						                        <!-- 操作类型区 -->
+						                        <div class="operate_area" id="addOperate">
+						                            <a id="addDetail" onclick="addDetail()" class="bgd_add img_hand">增加</a> 
+						                            <a id="deleteDetail" onclick="deleteDetail()" class="bgd_delete img_hand">删除</a> 
+						                        </div>
+						                	</div>
+						                	<div class="list_area">
+						                        <!-- 信息列表区 -->
+						                        <div class="info_area">
+						                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+						                                <tbody>
+						                                    <tr class="menuText list_head">
+						                                    	<th class="checkSelectAll"></th>
+						                                        <th class="">序号</th>
+						                                        <th class="">物料编码</th>
+						                                        <th class="">物料名称</th>
+						                                        <th class="">物料类型</th>
+						                                        <th class="">规格型号</th>
+						                                        <th class="">计量单位</th>
+						                                        <th class="">数量</th>
+						                                        <th class="">仓库</th>
+						                                        <th class="">备注</th>
+						                                    </tr>
+						                                </tbody>
+						                                <tbody class="tablelist" id="addTr">
+						                                    <tr class="listTableText list_list">
+						                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value="" /></td>
+						                                        <td>1</td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                        <td><input type="text" name="" value="" /></td>
+						                                    </tr>
+						                                </tbody>
+						
+						                            </table>
+						                        </div>
+						                        <!-- 确定按钮 -->
+						                        <div class="certainBtn">
+						                        	<a href="outstockDetail.html" class="bgd_blue_two img_hand">确定</a> 
+						                            <a href="outstockList.html" class="bgd_white_two img_hand">返回</a> 
+						                        </div>
+						                    </div>
+						                </div>
+									</div>
+					            </div>
+					        </div>
+					        
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("#metailInfo td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");  
+			}
+		);
+		
+		//-------- 增加明细 ---------
+	    function addDetail() {
+	        var trInt = $("#addTr").find("tr").length;
+			var no = trInt + 1;// 序号
+	        var dom = "<tr class='contentText list_list'><td><input type='checkbox' class='input_checkBox'></td>";
+	        dom += "<td>" + no + "</td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td></tr>";
+	        
+	        $("#addTr").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+
+		layui.use('element', function(){
+			var $ = layui.jquery, 
+			    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+		    //触发事件：添加、删除、切换
+		    var active = {
+			    tabAdd: function(){
+			        //新增一个Tab项
+			        element.tabAdd('demo', {
+			        	title: '新选项'+ (Math.random()*1000|0), 
+			        	content: '内容'+ (Math.random()*1000|0),
+			        	id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+			        })
+			    },
+			    tabChange: function(){
+			        //切换到指定Tab项
+			        element.tabChange('demo', '22'); //切换到：“用户管理”
+			    }
+		    };
+		  
+		    $('.site-demo-active').on('click', function(){
+		    	var othis = $(this), 
+		        	type = othis.data('type');
+		    	active[type] ? active[type].call(this, othis) : '';
+		    });
+		  
+		    //Hash地址的定位
+		    var layid = location.hash.replace(/^#test=/, '');
+		    element.tabChange('test', layid);
+		  
+		    element.on('tab(test)', function(elem){
+		   		location.hash = 'test='+ $(this).attr('lay-id');
+		    });
+		});
+		
+	</script>
+</html>

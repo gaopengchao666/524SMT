@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工艺流程列表</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：生产工艺管理 > 工艺流程设置</span></p>
+	            
+            	<!-- 搜索区 -->
+	            <div class="search_area">
+                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工艺流程查询条件</span></h4>
+                    <div class="select_area">
+                        <div class="select_text clear">
+                        	<div class="label_input">
+	                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+                        	</div>
+                        	<div class="label_input">
+	                            <label class="contentText">工艺文件：</label> <input type="text" name="" id="">
+                        	</div>
+                        	<div class="label_input">
+	                            <label class="contentText">流转卡名称：</label> <input type="text" name="" id="">
+                        	</div>
+                            <div class="floatLeft">
+	                            <button class="btn_search bgd_blue_search">查询</button>
+	                            <button class="btn_clear bgd_white_clear">重置</button>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工艺流程信息列表</span></h4>
+                		
+                        <!-- 操作类型区 -->
+                        <div class="operate_area">
+                            <a onclick="addprocess();" class="bgd_add img_hand">增加</a> 
+                            <a onclick="delUserGroup();" class="bgd_delete img_hand">删除</a> 
+                        </div>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="checkSelectAll"></th>
+                                        <th class="">产品图号</th>
+                                        <th class="">产品名称</th>
+                                        <th class="">PBOM名称</th>
+                                        <th class="">工艺文件</th>
+                                        <th class="">流转卡名称</th>
+                                        <th class="">丝网编号</th>
+                                        <th class="">操作列</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor" onclick="addprocess1();">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="processSetting.html" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+                                        <td><a class="cursor">IMAGE01</a></td>
+                                        <td>KYFG</td>
+                                        <td>PBOM001</td>
+                                        <td>工艺012</td>
+                                        <td>流转卡011</td>
+                                        <td>SW0011221</td>
+                                        <td>
+                                        	<span><a href="" title='编辑工艺流程' class='common-icon editor-icon'></a></span>
+                                        	<span><a href="" title='编辑PBOM' class='common-icon editor-pbom-icon'></a></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+	                    <!-- 页码区域 -->
+	                    <div class="page_area contentText clear">
+	                    	<div class="page_sum">
+	                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+	                    	</div>
+	                        <div class="page_jump">
+	                        	<span>跳转到&emsp;第</span>
+	                        	<input type="text" name="" id="" value="" />
+	                        	<span>页&emsp;</span>
+	                        	<button>Go</button>
+	                        </div>
+	                        <div class="page-pull-right async-page">
+	                            <button>上一页</button>
+	                            <button class="select_page">1</button>
+	                            <button>2</button>
+	                            <button>3</button>
+	                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+	                            <button>98</button>
+	                            <button>99</button>
+	                            <button>100</button>
+	                            <button>下一页</button>
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 工艺流程基本信息(添加) -->
+			<div class="mask hidden">
+				<div class="processDiv">
+					<h4 class="processTitle">
+						工艺流程基本信息(添加)
+						<img onclick="backprocess();" src="../../img/list/delete.png"/>
+					</h4>
+					<form id="addForm" action="" method="post" class="processForm">
+						<table border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th><span>产品图号：</span></th>
+                            <td><div  class='addRemind1'><input id="graphNumber" name="graphNumber" value=""/> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>流转卡名称：</span></th>
+                            <td><div  class='addRemind1'><input name="flowName"/> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>工艺文件：</span></th>
+                            <td><div  class='addRemind1'><select name="fileId">
+                                    <option value="">工艺1</option>
+                            </select> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>丝网编号：</span></th>
+                            <td><input name="silkNumber" placeholder="多个丝网编号用逗号分隔"></td>
+                        </tr>
+                        <tr>
+                            <th><span>备注：</span></th>
+                            <td><textarea name="remark" rows="5" cols=""></textarea></td>
+                        </tr>
+                     </table>
+					</form>
+					<!-- 确定按钮 -->
+                    <div class="certainBtn" style="margin-top:20px;">
+                    	<a href="processList.html" class="bgd_blue_two img_hand">确定</a> 
+                        <a onclick="backprocess();" class="bgd_white_two img_hand">返回</a> 
+                    </div>
+				</div>
+			</div>
+			
+			<!-- 工艺流程基本信息(修改) -->
+			<div class="mask1 hidden">
+				<div class="processDiv">
+					<h4 class="processTitle">
+						工艺流程基本信息(修改)
+						<img onclick="backprocess1();" src="../../img/list/delete.png"/>
+					</h4>
+					<form id="addForm" action="" method="post" class="processForm">
+						<table border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <th><span>产品图号：</span></th>
+                            <td><div  class='addRemind1'><input name="graphNumber" value="IMAGE01"/> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>流转卡名称：</span></th>
+                            <td><div  class='addRemind1'><input name="flowName" value="流转卡011"/> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>工艺文件：</span></th>
+                            <td><div  class='addRemind1'><select name="fileId">
+                                    <option value="">工艺012</option>
+                            </select> <span class="redColor">*</span></div></td>
+                        </tr>
+                        <tr>
+                            <th><span>丝网编号：</span></th>
+                            <td><input name="silkNumber" placeholder="多个丝网编号用逗号分隔" value="SW0011221" /></td>
+                        </tr>
+                        <tr>
+                            <th><span>备注：</span></th>
+                            <td><textarea name="remark" rows="5" cols=""></textarea></td>
+                        </tr>
+                     </table>
+					</form>
+					<!-- 确定按钮 -->
+                    <div class="certainBtn" style="margin-top:20px;">
+                    	<a href="processList.html" class="bgd_blue_two img_hand">确定</a> 
+                        <a onclick="backprocess1();" class="bgd_white_two img_hand">返回</a> 
+                    </div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		
+		//增加工艺流程基本信息
+		function addprocess(){
+			$(".mask").css("display", "block");
+		}
+		//返回工艺流程列表
+		function backprocess(){
+			$(".mask").css("display", "none");
+		}
+		
+		
+		//修改工艺流程基本信息
+		function addprocess1(){
+			$(".mask1").css("display", "block");
+		}
+		//返回工艺流程列表
+		function backprocess1(){
+			$(".mask1").css("display", "none");
+		}
+		
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+	</script>
+</html>

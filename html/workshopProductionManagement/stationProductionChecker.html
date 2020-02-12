@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>工位生产状态管理（检验员）</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：车间生产管理 > 生产计划管理</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>车间生产计划信息列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">计划号</th>
+                                        <th class="">产品图号</th>
+                                        <th class="">产品名称</th>
+                                        <th class="">项目编号</th>
+                                        <th class="">产品序列号范围</th>
+                                        <th class="">计划数量</th>
+                                        <th class="">完工数量</th>
+                                        <th class="">单位</th>
+                                        <th class="">计划开始时间</th>
+                                        <th class="">计划结束时间</th>
+                                        <th class="">实际开始时间</th>
+                                        <th class="">实际结束时间</th>
+                                        <th class="">完工进度</th>
+                                        <th class="">车间工单状态</th>
+                                        <th class="">备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>JHSAD8</td>
+                                        <td>IMAGE01</td>
+                                        <td>产品一</td>
+                                        <td>DD1002</td>
+                                        <td>100~9999</td>
+                                        <td>100</td>
+                                        <td>0</td>
+                                        <td>个</td>
+                                        <td>2018-05-06</td>
+                                        <td>2018-05-26</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>0%</td>
+                                        <td>未开工</td>
+                                        <td>部分排产</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工序生产计划信息列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th>工序</th>
+                                        <th>工位</th>
+                                        <th>负责人</th>
+                                        <th>实际开始时间</th>
+                                        <th>实际结束时间</th>
+                                        <th>计划数量</th>
+                                        <th>实际完成数量</th>
+                                        <th>完成进度</th>
+                                        <th>状态</th>
+                                        <th>备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td><a class="cursor" href="stationProductionInfoChecker.html">PCB准备</a></td>
+                                        <td>PCB准备</td>
+                                        <td>负责人A</td>
+                                        <td>2018-04-08</td>
+                                        <td></td>
+                                        <td>100</td>
+                                        <td>10</td>
+                                        <td>10%</td>
+                                        <td>生产中</td>
+                                        <td>加急</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td><a class="cursor" href="">印刷</a></td>
+                                        <td>印刷</td>
+                                        <td>负责人B</td>
+                                        <td>2018-04-08</td>
+                                        <td>2018-04-18</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>100%</td>
+                                        <td>已完成</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+	</script>
+</html>

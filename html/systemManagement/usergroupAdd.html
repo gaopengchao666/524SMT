@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加用户组权限</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+        <link rel="stylesheet" type="text/css" href="../../css/tree_Style.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/layui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：用户管理 > 用户组权限管理 > 添加用户组信息</span></p>
+	            
+			    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+			            <!------- 内容 ------->
+			            <div class="content content1">
+			                <!-- 用户列表内容区 -->
+			                <div class="con con_01">
+			                    <!-- 表单信息填写区 -->
+			                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>填写用户组信息</span><span class="necessary">（带*号为必填项）</span></h4>
+			                    <div class="write_area">
+			                        <form id="addFrom" action="" method="post">
+			                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%">
+			                                <tbody>
+			                                    <tr>
+			                                      <th>用户组编码：</th>
+										<td class="addRemind"><input id="groupCode" name="groupCode"
+											placeholder="长度4-20位,纯数字" /> <span class="redColor">*</span></td>
+										<th>用户组名称：</th>
+										<td class="addRemind"><input id="groupName" name="groupName"
+											placeholder="长度4-20位,无特殊符" /> <span class="redColor">*</span></td>
+										<th>父级权限：</th>
+										<td><select name="fatherGroup" id="fatherGroup">
+										<option  value="0">无</option>
+										<option  value="1000000001">系统管理员</option>
+										<option  value="1000000002">厂长</option>
+										<option  value="1000000003">生产计划员</option>
+										<option  value="1000000004">工艺师</option>
+										<option  value="1000000005">车间主管</option>
+										<option  value="1000000006">库管员</option>
+										<option  value="1000000007">生产人员</option>
+										<option  value="1000000008">检验员</option>
+										<option  value="1000000009">客户</option>
+										</select></td>
+			                                    </tr>
+			                                   <tr>
+										<th>权限的配置：
+												<div style="width:95%;"><img style="vertical-align:middle;" src="../../img/list/group_green.png">可读</div>
+												<div style="width:95%;"><img style="vertical-align:middle;" src="../../img/list/group_red.png">读写</div>
+										</th>
+										<td colspan="5"
+											style="height: 300px !important; overflow-Y: auto; overflow-X: hidden;"
+											class="scroll_style">
+											<ul
+												style="height: 300px !important; overflow-Y: auto; overflow-X: hidden;"
+												class="scroll_style">
+												<li class="li-level1">
+													<h3 style="font-size: 15px; font-weight: bold;">我的工作台</h3>
+													<ul>
+														<li class="li-level2 clear"><span><input
+																id="S_6" name="S_6" class="input_checkBox"
+																type="checkbox" value="6"><b>工作台管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_7" name="T_7"
+																			class="input_checkBox" type="checkbox" value="7"><label>待办事项</label></span>
+																		<span><input id="T_8" name="T_8"
+																			class="input_checkBox" type="checkbox" value="8"><label>预警信息</label></span>
+																		<span><input id="T_9" name="T_9"
+																			class="input_checkBox" type="checkbox" value="9"><label>生产雷达-车间</label></span>
+																		<span><input id="T_72" name="T_72"
+																			class="input_checkBox" type="checkbox" value="72"><label>生产雷达-厂长</label></span>
+																		<span><input id="T_73" name="T_73"
+																			class="input_checkBox" type="checkbox" value="73"><label>生产雷达-客户</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<!-- <li class="li-level2 clear"><span><input
+																id="S_7" name="S_7" class="input_checkBox"
+																type="checkbox" value="7"><b>待办事项</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_7" name="T_7"
+																			class="input_checkBox" type="checkbox" value="7"><label>待办事项</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level2 clear"><span><input
+																id="S_8" name="S_8" class="input_checkBox"
+																type="checkbox" value="8"><b>预警信息</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_8" name="T_8"
+																			class="input_checkBox" type="checkbox" value="8"><label>预警信息</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level2 clear"><span><input
+																id="S_9" name="S_9" class="input_checkBox"
+																type="checkbox" value="9"><b>生产监测雷达</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_9" name="T_9"
+																			class="input_checkBox" type="checkbox" value="9"><label>生产监测雷达</label></span>
+																	</div>
+																</li>
+															</ul></li> -->
+													</ul>
+												<li class="li-level1">
+													<h3 style="font-size: 15px; font-weight: bold;">数据分析</h3>
+													<ul>
+														<li class="li-level2 clear"><span><input
+																id="S_10" name="S_10" class="input_checkBox"
+																type="checkbox" value="10"><b>质量分析管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_11" name="T_11"
+																			class="input_checkBox" type="checkbox" value="11"><label>合格率分析</label></span>
+																		<span><input id="T_12" name="T_12"
+																			class="input_checkBox" type="checkbox" value="13"><label>AOI检测数据分析</label></span>
+																		<span><input id="T_13" name="T_13"
+																			class="input_checkBox" type="checkbox" value="13"><label>检测仪器数据分析</label></span>
+																	</div>
+																</li>
+															</ul></li>
+													</ul>
+												</li>
+												<li class="li-level1">
+													<h3 style="font-size: 15px; font-weight: bold;">生产管理</h3>
+													<ul>
+														<li class="li-level2 clear"><span><input
+																id="S_14" name="S_14" class="input_checkBox"
+																type="checkbox" value="14"><b>生产基础信息管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_15" name="T_15"
+																			class="input_checkBox" type="checkbox" value="15"><label>车间产线管理</label></span>
+																		<span><input id="T_16" name="T_16"
+																			class="input_checkBox" type="checkbox" value="16"><label>车间工位管理</label></span>
+																		<span><input id="T_17" name="T_17"
+																			class="input_checkBox" type="checkbox" value="17"><label>线边物料管理</label></span>
+																		<span><input id="T_18" name="T_18"
+																			class="input_checkBox" type="checkbox" value="18"><label>工艺文件管理</label></span>
+																		<span><input id="T_19" name="T_19"
+																			class="input_checkBox" type="checkbox" value="19"><label>工艺流转卡管理</label></span>
+																		<span><input id="T_20" name="T_20"
+																			class="input_checkBox" type="checkbox" value="20"><label>项目信息管理</label></span>
+																		<span><input id="T_21" name="T_21"
+																			class="input_checkBox" type="checkbox" value="21"><label>BOM资料管理</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level2 clear"><span><input
+																id="S_22" name="S_22" class="input_checkBox"
+																type="checkbox" value="22"><b>生产工艺管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_23" name="T_23"
+																			class="input_checkBox" type="checkbox" value="23"><label>工艺流程设置</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level2 clear"><span><input
+																id="S_24" name="S_24" class="input_checkBox"
+																type="checkbox" value="24"><b>车间生产管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_25" name="T_25"
+																			class="input_checkBox" type="checkbox" value="25"><label>生产计划管理</label></span>
+																		<span><input id="T_26" name="T_26"
+																			class="input_checkBox" type="checkbox" value="26"><label>工位机损管理</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level2 clear"><span><input
+																id="S_27" name="S_27" class="input_checkBox"
+																type="checkbox" value="27"><b>生产示警管理</b></span>
+															<ul>
+																<li>
+																	<div class="div1 clear">
+																		<span><input id="T_28" name="T_28"
+																			class="input_checkBox" type="checkbox" value="28"><label>生产示警规则管理</label></span>
+																		<span><input id="T_29" name="T_29"
+																			class="input_checkBox" type="checkbox" value="29"><label>生产异常告警</label></span>
+																		<span><input id="T_30" name="T_30"
+																			class="input_checkBox" type="checkbox" value="30"><label>生产延误计划预警</label></span>
+																		<span><input id="T_31" name="T_31"
+																			class="input_checkBox" type="checkbox" value="31"><label>未按时排产预警</label></span>
+																	</div>
+																</li>
+															</ul></li>
+														<li class="li-level1">
+															<h3 style="font-size: 15px; font-weight: bold;">物料管理</h3>
+															<ul>
+																<li class="li-level2 clear"><span><input
+																		id="S_32" name="S_32" class="input_checkBox"
+																		type="checkbox" value="32"><b>基础信息管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_33" name="T_33"
+																					class="input_checkBox" type="checkbox" value="33"><label>物料信息管理</label></span>
+																				<span><input id="T_34" name="T_34"
+																					class="input_checkBox" type="checkbox" value="34"><label>物资类型管理</label></span>
+																				<span><input id="T_35" name="T_35"
+																					class="input_checkBox" type="checkbox" value="35"><label>仓库管理</label></span>
+																				<span><input id="T_36" name="T_36"
+																					class="input_checkBox" type="checkbox" value="36"><label>库位管理</label></span>
+																				<span><input id="T_37" name="T_37"
+																					class="input_checkBox" type="checkbox" value="37"><label>供应商管理</label></span>
+																				<span><input id="T_38" name="T_38"
+																					class="input_checkBox" type="checkbox" value="38"><label>计量单位管理</label></span>
+																			</div>
+																		</li>
+																	</ul>
+																<li class="li-level2 clear"><span><input
+																		id="S_39" name="S_39" class="input_checkBox"
+																		type="checkbox" value="39"><b>库存日常管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_40" name="T_40"
+																					class="input_checkBox" type="checkbox" value="40"><label>入库管理</label></span>
+																				<span><input id="T_41" name="T_41"
+																					class="input_checkBox" type="checkbox" value="41"><label>出库管理</label></span>
+																				<span><input id="T_42" name="T_42"
+																					class="input_checkBox" type="checkbox" value="42"><label>机损管理</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_43" name="S_43" class="input_checkBox"
+																		type="checkbox" value="43"><b>库存规则管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_44" name="T_44"
+																					class="input_checkBox" type="checkbox" value="44"><label>安全库存规则</label></span>
+																				<span><input id="T_45" name="T_45"
+																					class="input_checkBox" type="checkbox" value="45"><label>库存盘点规则</label></span>
+																				<span><input id="T_46" name="T_46"
+																					class="input_checkBox" type="checkbox" value="46"><label>物料出库规则</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_48" name="S_48" class="input_checkBox"
+																		type="checkbox" value="48"><b>库存盘点管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_49" name="T_49"
+																					class="input_checkBox" type="checkbox" value="49"><label>库存盘点</label></span>
+																				<span><input id="T_50" name="T_50"
+																					class="input_checkBox" type="checkbox" value="50"><label>盘点审核</label></span>
+																				<span><input id="T_51" name="T_51"
+																					class="input_checkBox" type="checkbox" value="51"><label>盘点差异调整</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_52" name="S_52" class="input_checkBox"
+																		type="checkbox" value="52"><b>物料需求管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_53" name="T_53"
+																					class="input_checkBox" type="checkbox" value="53"><label>安全库存补料管理</label></span>
+																				<span><input id="T_54" name="T_54"
+																					class="input_checkBox" type="checkbox" value="54"><label>机损补料申请管理</label></span>
+																				<span><input id="T_55" name="T_55"
+																					class="input_checkBox" type="checkbox" value="55"><label>计划齐套缺料管理</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_56" name="S_56" class="input_checkBox"
+																		type="checkbox" value="56"><b>库存查询管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_57" name="T_57"
+																					class="input_checkBox" type="checkbox" value="57"><label>单据查询</label></span>
+																				<span><input id="T_58" name="T_58"
+																					class="input_checkBox" type="checkbox" value="58"><label>账龄查询</label></span>
+																				<span><input id="T_59" name="T_59"
+																					class="input_checkBox" type="checkbox" value="59"><label>库存可用量查询</label></span>
+																				<span><input id="T_60" name="T_60"
+																					class="input_checkBox" type="checkbox" value="60"><label>预警查询</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_61" name="S_61" class="input_checkBox"
+																		type="checkbox" value="61"><b>报表统计管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_62" name="T_62"
+																					class="input_checkBox" type="checkbox" value="62"><label>出入库统计</label></span>
+																				<span><input id="T_63" name="T_63"
+																					class="input_checkBox" type="checkbox" value="63"><label>库存物料统计</label></span>
+																				<span><input id="T_64" name="T_64"
+																					class="input_checkBox" type="checkbox" value="64"><label>物料领用分析</label></span>
+																				<span><input id="T_65" name="T_65"
+																					class="input_checkBox" type="checkbox" value="65"><label>机损统计</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+															</ul>
+														</li>
+														<li class="li-level1">
+															<h3 style="font-size: 15px; font-weight: bold;">系统管理</h3>
+															<ul>
+																<li class="li-level2 clear"><span><input
+																		id="S_66" name="S_66" class="input_checkBox"
+																		type="checkbox" value="66"><b>权限管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_67" name="T_67"
+																					class="input_checkBox" type="checkbox" value="67"><label>用户管理</label></span>
+																				<span><input id="T_68" name="T_68"
+																					class="input_checkBox" type="checkbox" value="68"><label>用户组权限管理</label></span>
+																				<span><input id="T_69" name="T_69"
+																					class="input_checkBox" type="checkbox" value="69"><label>组织机构管理</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+																<li class="li-level2 clear"><span><input
+																		id="S_70" name="S_70" class="input_checkBox"
+																		type="checkbox" value="70"><b>日志管理</b></span>
+																	<ul>
+																		<li>
+																			<div class="div1 clear">
+																				<span><input id="T_71" name="T_71"
+																					class="input_checkBox" type="checkbox" value="71"><label>日志管理</label></span>
+																			</div>
+																		</li>
+																	</ul></li>
+															</ul>
+													</ul>
+											</ul>
+										</td>
+			                                    </tr>
+			                                    <tr>
+			                                    	<th>用户组权限描述：</th>
+			                                    	<td colspan="5">
+			                                            <textarea style="width: 95%;height: 100px;"></textarea>
+			                                        </td>
+			                                    </tr>
+			                                </tbody>
+			                            </table>
+			                        </form>
+			                        <!-- 保存、重置按钮区 -->
+			                        <div align="center" class="btn_submit">
+			                            <a href="usergroupList.html" class="bgd_blue_two img_hand contentText">确定</a>
+			                            <a href="usergroupList.html" class="bgd_white_two img_hand"> 返回 </a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+	            
+			</div>
+			
+			<!-- 用户权限--可读--读写 -->
+			<div class="mask hidden">
+				<div class="input_radio">
+					<p>读写权限设置<!--<img onclick="deleteRadio();" src="../../img/list/delete.png"/>--></p>
+					<input type="radio" name="limit1" id="" value="可读" checked="checked"/><label>可读</label>&emsp;&emsp;
+					<input type="radio" name="limit1" id="" value="读写" /><label>读写</label>
+					<div><button onclick="deleteRadio();" class="bgd_blue_two img_hand contentText">确定</button></div>
+				</div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/3rd/jquery-1.9.1.min.js"
+	type="text/javascript"></script>
+<script src="../../js/3rd/jquery.validate.min.js"
+	type="text/javascript"></script>
+<script src="../../js/common/common.js"
+	type="text/javascript"></script>
+<script src="../../js/sysmanager/userGroupAdd.js"
+	type="text/javascript"></script>
+<script type="text/javascript">
+	var h = document.documentElement.clientHeight;
+	$(".wrap").css("height", h);
+
+	// 获取每行 td 的兄弟节点
+	$(".info_area td").hover(function() {
+		$(this).parent().children().addClass("td_hover");
+	}, function() {
+		$(this).parent().children().removeClass("td_hover");
+	});
+
+	choseNow = null;
+	// 出现读写权限设置
+	$(".input_checkBox").change(function() {
+		if (this.checked) {
+			if (this.name[0] == "T") {
+				$(".mask").css("display", "block");
+				choseNow = this;
+			}
+		} else {
+			if (!-[ 1, ]) {
+				this.nextSibling.style.backgroundColor = 'white';
+				this.nextSibling.style.color = 'black';
+			} else {
+				this.nextElementSibling.style.backgroundColor = 'white';
+				this.nextElementSibling.style.color = 'black';
+			}
+		}
+	});
+	// 关闭读写权限设置
+	function deleteRadio() {
+		$(".mask").css("display", "none");
+		var setNow = document.getElementsByName("limit1");
+		for (var i = 0; i < setNow.length; i++) {
+			if (setNow[i].checked) {
+				if (!-[ 1, ]) {
+					choseNow.nextSibling.style.backgroundColor = 'red';
+					choseNow.nextSibling.style.padding = '2px';
+					choseNow.nextSibling.style.color = 'white';
+				} else {
+					choseNow.nextElementSibling.style.backgroundColor = 'red';
+					choseNow.nextElementSibling.style.padding = '2px';
+					choseNow.nextElementSibling.style.color = 'white';
+				}
+				var id = choseNow.id + "_L";
+				document.getElementById(id).value = "W";
+			} else {
+				if (!-[ 1, ]) {
+					choseNow.nextSibling.style.backgroundColor = 'green';
+					choseNow.nextSibling.style.padding = '2px';
+					choseNow.nextSibling.style.color = 'white';
+				} else {
+					choseNow.nextElementSibling.style.backgroundColor = 'green';
+					choseNow.nextElementSibling.style.padding = '2px';
+					choseNow.nextElementSibling.style.color = 'white';
+				}
+				var id = choseNow.id + "_L";
+				document.getElementById(id).value = "R";
+			}
+		}
+	}
+</script>
+<script type="text/javascript">
+	$("input[name^='S']").attr("disabled", true);
+	//给所有的二级选择框添加取消事件
+	$("input[name^='S']").click(function(){
+		//如果它取消选中，将子级选中框全部设置为未选中
+		if(!this.checked){
+			$.each($(this).parent().next().find("input"),function(index,element){
+				element.checked=false;
+				var lable = $(element).next();
+				lable.css("backgroundColor","white");
+				lable.css("color","black");
+			});
+			this.disabled = true;
+		}else{
+		}
+	});
+	//给所有的三级选择框添加二级选中联动事件
+	$("input[name^='T']").click(function(){
+		//如果它取消选中，判断他的兄弟inputs是否全部取消
+		if(!this.checked){
+			/* var checkedNum = 0;
+			$.each($(this).parent().parent().find("input"),function(index,element){
+				if(element.checked=true){
+					checkedNum += 1;
+				}
+			});
+			if(checkedNum == 0){
+				$(this).parent().parent().parent().parent().prev().find("input").attr("checked",false);
+			} */
+		}else{
+			//如果它选中，将他的父级input选中
+			$(this).parent().parent().parent().parent().prev().find("input").prop("checked",true);
+			$(this).parent().parent().parent().parent().prev().find("input").prop("disabled", false);
+		}
+	});
+</script>
+</html>

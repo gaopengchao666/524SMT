@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>预警查询</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：库存查询 > 预警查询</span></p>
+	            
+	            <!------ tab标签 ------>
+	            <div class="layui-tab layui-tab-card">
+				    <ul class="layui-tab-title">
+					    <li class="layui-this">数量预警</li>
+					    <li>有效期预警</li>
+				    </ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>数量预警查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">物料编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">物料类型：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">物料名称：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">规格型号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">告警方式：</label> <select name="">
+					                            	<option value="">全部告警</option>
+					                            	<option value="">高于库存数量上限</option>
+					                            	<option value="">低于库存数量下限</option>
+					                            </select>
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>数量预警列表</span></h4>
+				                		
+				                        <!-- 操作类型区 -->
+				                        <div class="operate_area" id="warningBrand">
+				                            <span><img src="../../img/list/yellow.png"/> 高于库存数量上限</span>
+				                            <span><img src="../../img/list/red.png"/> 低于库存数量下限</span>
+				                        </div>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th class="">物料编码</th>
+				                                        <th class="">物料类型</th>
+				                                        <th class="">物料名称</th>
+				                                        <th class="">规格型号</th>
+				                                        <th class="">库存数量下限</th>
+				                                        <th class="">计量单位</th>
+				                                        <th class="">数量</th>
+				                                        <th class="">库存数量上限</th>
+				                                        <th class="">仓库名称</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist">
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningRed">2018040511</td>
+				                                        <td class="warningRed">电阻</td>
+				                                        <td class="warningRed">电阻器</td>
+				                                        <td class="warningRed">5K</td>
+				                                        <td class="warningRed">10</td>
+				                                        <td class="warningRed">个</td>
+				                                        <td class="warningRed">5</td>
+				                                        <td class="warningRed">100</td>
+				                                        <td class="warningRed">仓库1</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningRed">2018040511</td>
+				                                        <td class="warningRed">电阻</td>
+				                                        <td class="warningRed">电阻器</td>
+				                                        <td class="warningRed">5K</td>
+				                                        <td class="warningRed">10</td>
+				                                        <td class="warningRed">个</td>
+				                                        <td class="warningRed">5</td>
+				                                        <td class="warningRed">100</td>
+				                                        <td class="warningRed">仓库1</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningYellow">2018040511</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">5K</td>
+				                                        <td class="warningYellow">10</td>
+				                                        <td class="warningYellow">个</td>
+				                                        <td class="warningYellow">111</td>
+				                                        <td class="warningYellow">100</td>
+				                                        <td class="warningYellow">仓库1</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningYellow">2018040511</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">5K</td>
+				                                        <td class="warningYellow">10</td>
+				                                        <td class="warningYellow">个</td>
+				                                        <td class="warningYellow">111</td>
+				                                        <td class="warningYellow">100</td>
+				                                        <td class="warningYellow">仓库1</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningYellow">2018040511</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">5K</td>
+				                                        <td class="warningYellow">10</td>
+				                                        <td class="warningYellow">个</td>
+				                                        <td class="warningYellow">111</td>
+				                                        <td class="warningYellow">100</td>
+				                                        <td class="warningYellow">仓库1</td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page-pull-right async-page">
+					                            <button>首页</button>
+					                            <button>&lt;&lt;</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button>&gt;&gt;</button>
+					                            <button>尾页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+						</div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>物料有效期预警/告警查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">物料编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">物料类型：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">物料名称：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">规格型号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">入库日期：</label> <input type="text" name="" id="dateControl" readonly="readonly" />
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">告警方式：</label> <select name="">
+					                            	<option value="">全部告警</option>
+					                            	<option value="">有效期告警</option>
+					                            	<option value="">有效期预警</option>
+					                            </select>
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>物料有效期预警/告警列表</span></h4>
+				                		
+				                        <!-- 操作类型区 -->
+				                        <div class="operate_area" id="warningBrand">
+				                            <span><img src="../../img/list/yellow.png"/> 有效期预警</span>
+				                            <span><img src="../../img/list/red.png"/> 有效期告警</span>
+				                        </div>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th class="">物料编码</th>
+				                                        <th class="">物料类型</th>
+				                                        <th class="">物料名称</th>
+				                                        <th class="">规格型号</th>
+				                                        <th class="">生产日期</th>
+				                                        <th class="">入库日期</th>
+				                                        <th class="">计量单位</th>
+				                                        <th class="">库存数量</th>
+				                                        <th class="">失效日期</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist">
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningRed">2018DSGFSDGW</td>
+				                                        <td class="warningRed">电阻器</td>
+				                                        <td class="warningRed">电阻器</td>
+				                                        <td class="warningRed">16K</td>
+				                                        <td class="warningRed">2017-05-28</td>
+				                                        <td class="warningRed">2018-03-14</td>
+				                                        <td class="warningRed">个</td>
+				                                        <td class="warningRed">100</td>
+				                                        <td class="warningRed">2018-04-23</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningYellow">20180SDGSG</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">16K</td>
+				                                        <td class="warningYellow">2018-05-28</td>
+				                                        <td class="warningYellow">2019-03-14</td>
+				                                        <td class="warningYellow">个</td>
+				                                        <td class="warningYellow">565</td>
+				                                        <td class="warningYellow">2019-05-12</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningYellow">2018040511</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">电阻器</td>
+				                                        <td class="warningYellow">16K</td>
+				                                        <td class="warningYellow">2018-05-28</td>
+				                                        <td class="warningYellow">2019-08-18</td>
+				                                        <td class="warningYellow">个</td>
+				                                        <td class="warningYellow">158</td>
+				                                        <td class="warningYellow">2019-10-10</td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page_jump">
+					                        	<span>跳转到&emsp;第</span>
+					                        	<input type="text" name="" id="" value="" />
+					                        	<span>页&emsp;</span>
+					                        	<button>Go</button>
+					                        </div>
+					                        <div class="page-pull-right async-page">
+					                            <button>上一页</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+					                            <button>98</button>
+					                            <button>99</button>
+					                            <button>100</button>
+					                            <button>下一页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 等待加载 -->
+			<!--<div class="loader"><p class="load_hint">请等待加载••••••</p></div>-->
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		
+		// 日期控件
+		$(function(){
+	        $("#dateControl").datepicker({
+	        	dateFormat : 'yy-mm-dd',
+	            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+	 		 	changeYear:true,
+	 		 	changeMonth:true,
+	 		 	showOn:"button",
+	 		 	buttonImage:"../../img/button/calendar.png",
+	 		 	buttonImageOnly:false
+	        });
+	     });
+		
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+	    
+	    layui.use('element', function(){
+			var $ = layui.jquery, 
+			    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+		    //触发事件：添加、删除、切换
+		    var active = {
+			    tabAdd: function(){
+			        //新增一个Tab项
+			        element.tabAdd('demo', {
+			        	title: '新选项'+ (Math.random()*1000|0), 
+			        	content: '内容'+ (Math.random()*1000|0),
+			        	id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+			        })
+			    },
+			    tabChange: function(){
+			        //切换到指定Tab项
+			        element.tabChange('demo', '22'); //切换到：“用户管理”
+			    }
+		    };
+		  
+		    $('.site-demo-active').on('click', function(){
+		    	var othis = $(this), 
+		        	type = othis.data('type');
+		    	active[type] ? active[type].call(this, othis) : '';
+		    });
+		  
+		    //Hash地址的定位
+		    var layid = location.hash.replace(/^#test=/, '');
+		    element.tabChange('test', layid);
+		  
+		    element.on('tab(test)', function(elem){
+		   		location.hash = 'test='+ $(this).attr('lay-id');
+		    });
+		});
+	</script>
+</html>

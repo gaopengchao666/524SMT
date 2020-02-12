@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>排产</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：车间生产管理 > 生产计划管理 > 排产</span></p>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>排产信息列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th>计划号</th>
+										<th>产品图号</th>
+										<th>产品名称</th>
+										<th>项目编码</th>
+										<th>计划数量</th>
+										<th>完工数量</th>
+										<th>计划开始时间</th>
+										<th>计划结束时间</th>
+										<th>实际开始时间</th>
+										<th>实际结束时间</th>
+										<th>完工进度</th>
+										<th>车间工单状态</th>
+										<th>备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                        <td>JHSAD8432</td>
+                                        <td>IMAGE01</td>
+                                        <td>产品一</td>
+                                        <td>DD0012</td>
+                                        <td>100</td>
+                                        <td>0</td>
+                                        <td>2018-05-06</td>
+                                        <td>2018-05-26</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>0%</td>
+                                        <td>未开工</td>
+                                        <td>部分排产</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="margin-top: 20px;">
+							    <tbody>
+									<tr class="menuText list_head">
+										<th >起始唯一序列号</th>
+										<td ><input type = "text" id = "startCodeRange" readonly = "true"></td>
+										<th >结束唯一序列号</th>
+										<td ><input type = "text" id = "endCodeRange" readonly = "true"/></td>
+									</tr>
+								</tbody>
+							</table>
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="margin-top: 20px;">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th>工序</th>
+                                        <th>工位</th>
+                                        <th>负责人</th>
+                                        <th>实际开始时间</th>
+                                        <th>实际结束时间</th>
+                                        <th>计划数量</th>
+                                        <th>完工数量</th>
+                                        <th>完工进度</th>
+                                        <th>状态</th>
+                                        <th>备注</th>
+                                    </tr>
+                                </tbody>
+                                <tbody class="tablelist" id="dealWarning">
+                                    <tr class="listTableText list_list">
+                                    	<td>PCB准备</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>未开始</td>
+                                    	<td>未开始</td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>印刷</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>贴裝</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>回流焊</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>AIO</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>检验</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    
+                                    <tr class="listTableText list_list">
+                                    	<td>成型</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>峰波焊</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                    	<td>返修</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">PCB准备</option>
+	                                    		<option value="">印刷</option>
+	                                    		<option value="">贴裝</option>
+	                                    		<option value="">回流焊</option>
+	                                    		<option value="">回流炉</option>
+	                                    		<option value="">AIO</option>
+	                                    		<option value="">检验</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td>
+                                    		<select name="" class="selectWidth">
+	                                    		<option value="">库管员</option>
+	                                    		<option value="">负责人B</option>
+	                                    		<option value="">负责人C</option>
+	                                    	</select>
+                                    	</td>
+                                    	<td></td>
+                                    	<td></td>
+                                    	<td>100</td>
+                                    	<td>0</td>
+                                    	<td>0%</td>
+                                    	<td>未开工</td>
+                                    	<td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 确定按钮 -->
+	                        <div class="certainBtn" style="margin-top: 20px;">
+	                        	<a href="" class="bgd_blue_two img_hand">保存</a> 
+	                            <a href="" class="bgd_white_two img_hand">返回</a> 
+	                        </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+	</script>
+</html>

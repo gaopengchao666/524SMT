@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>头部</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/top.css"/>
+	</head>
+	<body>
+		<div class="wrap clear">
+			   <div class="logo floatLeft clear">
+            <img class="logo1" src="../../img/top/logo.png" />
+            <img src="../../img/top/logo3.png"  style="position:relative;top:0;left:1%;" />
+        </div>
+			<div class="nav floatRight clear">
+				<ul>
+					<li id="li6" style="cursor:pointer;">
+						<a onclick="menu6Click()">
+							<img src="../../img/top/enter.png"/>
+							<p id="menu6">退出系统</p>
+						</a>
+					</li>
+					<li id="li5" style="cursor:pointer;">
+						<a onclick="menu5Click()">
+							<img src="../../img/top/manage1.png"/>
+							<p id="menu5">系统管理</p>
+						</a>
+					</li>
+					<li id="li4" style="cursor:pointer;">
+						<a onclick="menu4Click()">
+							<img src="../../img/top/stock5.png"/>
+							<p id="menu4">物料管理</p>
+						</a>
+					</li>
+					<li id="li3" style="cursor:pointer;">
+						<a onclick="menu3Click()">
+							<img src="../../img/top/produce.png"/>
+							<p id="menu3">生产管理</p>
+						</a>
+					</li>
+					<li id="li2" style="cursor:pointer;">
+						<a onclick="menu2Click()">
+							<img src="../../img/top/analize.png"/>
+							<p id="menu2">数据分析</p>
+						</a>
+					</li>
+					<li id="li1" style="cursor:pointer;" class="backgroundTab">
+						<a onclick="menu1Click()">
+							<img src="../../img/top/homepage1.png"/>
+							<p id="menu1">我的工作台</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="marquee">
+				当前用户：&emsp;<span id='currentUser'>超级管理员</span>&emsp;&emsp;<span>2018年9月10日</span>&emsp;&emsp;<span>星期一</span>&emsp;&emsp;<span>14:31:50</span>
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/menuTree.js" type="text/javascript" charset="utf-8"></script>
+</html>

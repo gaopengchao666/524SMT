@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>监测屏幕</title>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css">
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css">
+	</head>
+	<body>
+		<div id="main" style="overflow-y: true;height:100%;position: relative;">
+			<div id="alertDiv" style="width: 300px;height: 200px;background-color: rgba(255,0,0,0.8);position: fixed;right:0px;z-index: 100;margin-top:2px;margin-right: 10px;">
+					<div style="text-align: center;height: 50px;line-height: 50px;">
+						警告
+					</div>
+					<div style="text-align: center;height: 150px;">
+						订单一物料不足,请立即着手补充订单一所属物料
+					</div>
+				</div>
+			<div id="topDiv" style="width: 100%;height:25%;">
+				
+				<table style="height:100%;width:100%;" align="center">
+					<tr>
+						<td style="text-align: left;background-color: #9AC8F6;" colspan="2">核心指标</td>
+					</tr>
+					<tr>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">日期</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">2017/9/30</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;"></div>								</div>
+							</div>
+						</td>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">温度</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">23</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">℃</div>								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">湿度</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">40</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">%</div>								</div>
+							</div>
+						</td>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">噪声</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">30</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">db</div>								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">车间生产总数</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">12345</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">个</div>								</div>
+							</div>
+						</td>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">完工订单数</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">100</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">个</div>								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">在制订单数</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">2</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">个</div>								</div>
+							</div>
+						</td>
+						<td  class="list_headTd" style="height: 50px;width: 50%;">
+							<div>
+								<div style="font-size: 22px;float: left;width: 20%;height:50px;line-height: 50px;">未排产订单数</div>
+								<div style="float: left;width: 60%;">
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasda</div>
+									<div style="text-align: left;height: 25px;line-height: 25px;">asdasdasdasdasdasdasdasd</div>
+								</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">20</div>
+								<div style="float: left;width: 10%;height:50px;line-height: 50px;font-size: 22px;">个</div>								</div>
+							</div>
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+			<div id="centerDiv" style="width: 100%;">
+              <table style="height: 50%;width: 100%;">
+              	<tr>
+					<td style="text-align: left;background-color: #9AC8F6;" colspan="8">车间生产状态</td>
+				</tr>
+              	<tr>
+              		<td class="list_headTd ">当前订单</td>
+              		<td>order20170930</td>
+              		<td class="list_headTd">完工比例</td>
+              		<td>70%</td>
+              		<td class="list_headTd">完工数量</td>
+              		<td>12344</td>
+              		<td class="list_headTd">在制数量</td>
+              		<td>50</td>
+              	</tr>
+              	<tr class="list_headTd">
+              		<td>工位/设备</td>
+              		<td>状态</td>
+              		<td>生产订单号</td>
+              		<td>完工数量</td>
+              		<td>剩余数量</td>
+              		<td>一次合格率</td>
+              		<td>整体合格率</td>
+              		<td>备注</td>
+              	</tr>
+              	<tr>
+              		<td>SMT</td>
+              		<td>忙</td>
+              		<td>order20170930</td>
+              		<td>1255</td>
+              		<td>55</td>
+              		<td>90%</td>
+              		<td>90%</td>
+              		<td>无</td>
+              	</tr>
+              	<tr>
+              		<td>AOI</td>
+              		<td>忙</td>
+              		<td>order12335</td>
+              		<td>554</td>
+              		<td>654</td>
+              		<td>98%</td>
+              		<td>98%</td>
+              		<td>无</td>
+              	</tr>
+              	<tr>
+              		<td>回流炉</td>
+              		<td>忙</td>
+              		<td>order25222</td>
+              		<td>84665</td>
+              		<td>5466</td>
+              		<td>99%</td>
+              		<td>99%</td>
+              		<td>无</td>
+              	</tr>
+              	<tr>
+              		<td>人工1</td>
+              		<td>闲</td>
+              		<td>order55</td>
+              		<td>80</td>
+              		<td>5</td>
+              		<td>89%</td>
+              		<td>93%</td>
+              		<td>无</td>
+              	</tr>
+              	<tr>
+              		<td>返修1</td>
+              		<td>忙</td>
+              		<td>order33352</td>
+              		<td>8488</td>
+              		<td>9898</td>
+              		<td>89%</td>
+              		<td>98%</td>
+              		<td>无</td>
+              	</tr>	
+              </table>
+			</div>
+			<div style="width:100%;">
+				<table style="width: 100%;">
+					<tr>
+					<td style="text-align: left;background-color:#9AC8F6;width: 100%;">人员生产状态</td>
+				</tr>
+				</table>
+			</div>
+			<div id="bottomDiv" style="width: 100%;height:400px;">
+				<div id="bottomLeftDiv" style="height: 100%;width: 50%;float: left;">
+                 <table style=width:100%;">
+                 	<tr class="list_headTd">
+                 		<td>操作员</td>
+                 		<td>状态</td>
+                 		<td>工序</td>
+                 		<td></td>
+                 	</tr>
+                 	<tr class="list_headTd">
+                 		<td>张三</td>
+                 		<td>忙</td>
+                 		<td>工序1</td>
+                 		<td><img src="../../img/button/operate_people.png" style="height: 100px;width: 100px;"/></td>
+                 	</tr>
+                 	<tr class="list_headTd">
+                 		<td>李四</td>
+                 		<td>忙</td>
+                 		<td>工序2</td>
+                 		<td><img src="../../img/button/operate_people.png" style="height: 100px;width: 100px;"/></td>
+                 	</tr>
+                 	<tr class="list_headTd">
+                 		<td>王五</td>
+                 		<td>忙</td>
+                 		<td>工序1</td>
+                 		<td><img src="../../img/button/operate_people.png" style="height: 100px;width: 100px;"/></td>
+                 	</tr>
+                 </table>
+				</div>
+				<div id="bottomRightDiv" style="height: 100%;width: 50%;float: right;">
+
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../../js/echarts.common.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script type="text/javascript">
+		
+		var tag = true;
+		
+		var myChart = echarts.init(document.getElementById('bottomRightDiv'));	
+	    var xValue = ["20170101", "20170102", "20170103", "20170104", "20170105", "20170106", "20170107", "20170108", "20170109", "20170110", "20170111", "20170112", "20170113", "20170114", "20170115", "20170116", "20170117", "20170118", "20170119", "20170120", "20170121", "20170122", "20170123", "20170124", "20170125", "20170126", "20170127", "20170128", "20170129", "20170130"];
+	
+	
+		/* var colors = ['#5793f3', '#d14a61', '#675bba'];  */
+		var option = {
+			title: {
+				text: '整体合格率',
+				left:'center',
+				top:"5%"
+			},
+			/* color:"black",  */
+		    tooltip: {
+		        trigger: 'none',
+		        axisPointer: {
+		            type: 'cross'
+		        }
+		    },
+		    /* legend: {
+		            data:['整体合格率']
+		    }, */
+		    grid: {
+		        top: '15%',
+		        bottom: '20%',
+		        left:'15%',
+		        right:'10%'
+		    },
+		    xAxis: [
+		        {
+		            type: 'category',
+		            axisTick: {
+		                alignWithLabel: true
+		            },
+		            axisLine: {
+		                onZero: false,
+		                lineStyle: {
+		                    color: '#5793f3'
+		                } 
+		            },
+		            axisPointer: {
+		                label: {
+		                    formatter: function (params) {
+		                        return '合格率 ' + params.value
+		                            + (params.seriesData.length ? '：' + params.seriesData[0].data : '')+'%';
+		                    }
+		                }
+		            },
+		            axisLabel: {
+		            	interval:0,
+		            	rotate:90
+		            	},
+		            data: xValue
+		        }
+		        
+		    ],
+		    yAxis: [
+		        {
+		          type: 'value', 
+		          axisLabel: {  
+	                  show: true,  
+	                  interval: 'auto',  
+	                  formatter: '{value} %'  
+	                },  
+	               show: true,  
+		           minInterval: 5
+		            
+		        }],
+		    series: [
+		        {
+		            name:'整体合格率',
+		            type:'line',
+		            smooth: true,
+		            data: [3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 80.6, 46.6, 55.4, 18.4, 10.3, 0.7,3.9, 5.9, 11.1, 18.7, 48.3, 69.2, 90.3, 46.6, 55.4, 18.4, 10.3, 0.7, 55.4, 18.4, 10.3, 0.7,18.5,30.3]
+		        }
+		    ]
+		};	
+		myChart.setOption(option);
+		
+		
+	
+		window.setInterval(function(){
+			 var alertDiv = document.getElementById('alertDiv');
+			 if(tag){
+			 	alertDiv.style.display = "none";
+			 	tag = false;
+			 }else{
+			 	alertDiv.style.display = "block";
+			 	tag = true;
+			 }
+		},5000);
+	
+		
+	</script>
+</html>

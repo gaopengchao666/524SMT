@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日志列表</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：日志管理 > 日志管理</span></p>
+	            
+            	<!-- 搜索区 -->
+	            <div class="search_area">
+                  <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>日志查询条件</span></h4>
+                    <div class="select_area">
+                        <div class="select_text clear">
+                        	<div class="label_input">
+	                            <label class="contentText">开始时间：</label> <input readonly="readonly" name="startDate1" id="startDate1">
+                        	</div>
+                        	<div class="label_input">
+	                            <label class="contentText">结束时间：</label> <input readonly="readonly" name="startDate2" id="startDate2">
+                        	</div>
+                            <div class="floatLeft">
+	                            <button class="btn_search bgd_blue_search">查询</button>
+	                            <button class="btn_clear bgd_white_clear">重置</button>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	            
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>日志列表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <div class="info_area">
+                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr class="menuText list_head">
+                                        <th class="">登录名</th>
+                                        <th class="">业务域</th>
+                                        <th class="">业务内容</th>
+                                        <th class="">操作结果</th>
+                                        <th class="">操作时间</th>
+                                        <th class="">日志级别</th>
+                                </tbody>
+                                <tbody class="tablelist">
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                    <tr class="listTableText list_list">
+                                        <td>张三</td>
+                                        <td>删除操作</td>
+                                        <td>删除用户</td>
+                                        <td>删除成功</td>
+                                        <td>2018-04-10 14:20:36</td>
+                                        <td>中</td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+	                    <!-- 页码区域 -->
+	                    <div class="page_area contentText clear">
+	                    	<div class="page_sum">
+	                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+	                    	</div>
+	                        <div class="page_jump">
+	                        	<span>跳转到&emsp;第</span>
+	                        	<input type="text" name="" id="" value="" />
+	                        	<span>页&emsp;</span>
+	                        	<button>Go</button>
+	                        </div>
+	                        <div class="page-pull-right async-page">
+	                            <button>上一页</button>
+	                            <button class="select_page">1</button>
+	                            <button>2</button>
+	                            <button>3</button>
+	                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+	                            <button>98</button>
+	                            <button>99</button>
+	                            <button>100</button>
+	                            <button>下一页</button>
+	                        </div>
+	                    </div>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 等待加载 -->
+			<!--<div class="loader"><p class="load_hint">请等待加载••••••</p></div>-->
+			
+		</div>
+	</body>
+    <script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-1.9.1.min.js"></script>
+    <script src="../../js/3rd/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+		
+		$(function(){
+	        $("#startDate1").datepicker({
+	        	dateFormat : 'yy-mm-dd',
+	            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+	 		 	changeYear:true,
+	 		 	changeMonth:true,
+	 		 	showOn:"button",
+	 		 	buttonImage:"../../img/button/calendar.png",
+	 		 	buttonImageOnly:false
+	        });
+	     });
+		$(function(){
+	        $("#startDate2").datepicker({
+	        	dateFormat : 'yy-mm-dd',
+	            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+	 		 	changeYear:true,
+	 		 	changeMonth:true,
+	 		 	showOn:"button",
+	 		 	buttonImage:"../../img/button/calendar.png",
+	 		 	buttonImageOnly:false
+	        });
+	     });
+	</script>
+</html>

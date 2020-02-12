@@ -1,0 +1,197 @@
+/*----- 蓝色背景区域 -----*/
+.wrap{
+	background: rgb(230, 245, 255);
+	border: 1px solid transparent;
+	box-sizing: border-box;
+}
+
+/*----- 白色可用区域 -----*/
+.canuse{
+	background: white;
+	width: 99%;
+	height: 98%;
+	margin: 7px auto;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	box-sizing: border-box;
+}
+
+/*----- 上半部分区域 -----*/
+.content_up{
+	/*border: 1px solid red;*/
+	width: 99.4%;
+	height: 46%;
+	margin: auto;
+	margin-top: 3px;
+}
+.section{
+	border: 1px solid rgb(222, 235, 252);
+	height: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.sec_01, .sec_04{
+	width: 38%;	
+	float: left;
+}
+.sec_02, .sec_05{
+	width: 30%;	
+	float: left;
+	margin-left: 10px;
+}
+.sec_03, .sec_06{
+	width: 30%;	
+	float: right;
+}
+.sec_title{
+	/*background: rgb(238, 245, 252);*/
+	background: -webkit-linear-gradient(top, #e1ebfa, #f5f9ff);
+	background: -ms-linear-gradient(top, #e1ebfa 0%, #f5f9ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#e1ebfa, endColorstr=#f5f9ff,GradientType=0 );
+	
+	height: 30px;
+	border-bottom: 1px solid rgb(222, 235, 252);
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 30px; 
+	color: rgb(30, 30, 30);                                                                                                                                                                                                                                                           ;
+}
+.section img{
+	vertical-align: middle;
+	margin-top: -4px;
+}
+.section ul{
+	font-size: 14px;
+	color: rgb(100, 100, 100);
+}
+.section ul li:hover{
+	color: rgb(255, 50, 50);
+	cursor: pointer;
+}
+
+/*---- 新闻通知公告模块 ----*/
+.sec_01 ul{
+	width: 95%;
+	margin: 10px auto;
+}
+.sec_01 ul li{
+	padding: 5px 0px;
+	text-indent: 1rem;
+	border-bottom: 1px dotted rgb(220, 220, 220);
+}
+.sec_01 ul li:nth-child(1), 
+.sec_01 ul li:nth-child(2),
+.sec_01 ul li:nth-child(3){
+	color: rgb(240, 50, 50);
+}
+.sec_01 ul li .newstime{
+	float: right;
+	margin-right: 15px;
+}
+.hot{
+	color: rgb(255, 50, 50);
+	font-size: 12px;
+	position: relative;
+	top: -5px;
+	font-style: italic;
+	font-weight: bold;
+}
+.moreNews{
+	float: right;
+	margin-right: 10px;
+	font-size: 10px !important;
+	font-style: oblique;
+	color: rgb(80, 80, 80);
+}
+.moreNews:hover{
+	cursor: pointer;
+	color: rgb(255, 50, 50);
+}
+/*---- 短消息模块 ----*/
+.sec_02 ul{
+	width: 95%;
+	margin: 10px auto;
+}
+.sec_02 ul li{
+	padding: 5px 0px;
+	text-indent: 1rem;
+	border-bottom: 1px dotted rgb(220, 220, 220);
+}
+.sec_03 ul{
+	width: 95%;
+	margin: 10px auto;
+}
+.sec_03 ul li{
+	padding: 5px 0px;
+	text-indent: 1rem;
+	border-bottom: 1px dotted rgb(220, 220, 220);
+}
+/*---- 待办事项模块 ----*/
+.sec_04_left, .sec_04_middle, .sec_04_right{
+	width: 28%;
+	height: 185px;
+	border: 1px solid rgb(220, 220, 220);
+	border-radius: 8px;
+	float: left;
+	margin-top: 15px;
+	margin-left: 19px;
+}
+.sec_04 h4{
+	background: rgb(235, 245, 255);
+	font-size: 14px;
+	text-align: center;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	padding: 8px 0px;
+}
+.sec_04 ul li{
+	padding: 5px 0px;
+	text-indent: 0.5rem;
+}
+.sec_04 ul li span{
+	float: right;
+	margin-right: 30px;
+}
+/*---- 时间日期模块 ----*/
+.datetime{
+	font-size: 15px;
+	color: rgb(3, 33, 110);
+	/*margin-left: 25px;*/
+	margin-top: 15px;
+	text-align: center;
+}
+.weather{
+	text-align: center;
+	margin: 10px 0px;
+}
+/*---- 待我审批模块 ----*/
+.sec_05 ul{
+	width: 95%;
+	margin: 10px auto;
+}
+.sec_05 ul li{
+	padding: 5px 0px;
+	text-indent: 1rem;
+	border-bottom: 1px dotted rgb(220, 220, 220);
+}
+/*---- 其它事项模块 ----*/
+.sec_06 ul{
+	width: 95%;
+	margin: 10px auto;
+}
+.sec_06 ul li{
+	padding: 5px 0px;
+	text-indent: 1rem;
+	border-bottom: 1px dotted rgb(220, 220, 220);
+}
+/*----- 下半部分区域 -----*/
+.content_down{
+	/*border: 1px solid red;*/
+	width: 99.4%;
+	height: 46%;
+	margin: auto;
+	margin-top: 15px;
+}
+.sec_06 .sec_title{
+	text-indent: 10px;
+}

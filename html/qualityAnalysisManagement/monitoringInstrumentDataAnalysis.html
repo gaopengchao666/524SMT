@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>检测仪器数据分析</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：质量分析管理 > 检测仪器数据分析</span></p>
+	            <!-- 搜索区 -->
+	            <div class="search_area">
+                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>检测仪器数据导出</span></h4>
+                    <div class="select_area">
+                        <div class="select_text clear">
+                        	<div class="label_input">
+	                            <label class="contentText">开始日期：</label> <input type="text" name="" class="dateControl" id="dateControl" readonly="readonly" />
+                        	</div>
+                        	<div class="label_input">
+	                            <label class="contentText">结束日期：</label> <input type="text" name="" class="dateControl" id="dateControl1" readonly="readonly" />
+                        	</div>
+                            <div class="floatLeft">
+	                            <button class="bgd_blue_five">导出Excel</button>
+	                            <button class="btn_clear bgd_white_clear">重置</button>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	            <!-- 列表区 -->
+	            <div class="show_list">
+                	<div class="title_operate">
+                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>温湿度分析图表</span></h4>
+                	</div>
+                	<div class="list_area">
+                        <!-- 信息列表区 -->
+                        <img src="../../img/list/th.png"/>
+                    </div>
+                </div>
+			</div>
+			
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 日期控件
+		$(function(){
+	        $(".dateControl").datepicker({
+	        	dateFormat : 'yy-mm-dd',
+	            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+	 		 	changeYear:true,
+	 		 	changeMonth:true,
+	 		 	showOn:"button",
+	 		 	buttonImage:"../../img/button/calendar.png",
+	 		 	buttonImageOnly:false
+	        });
+	     });
+	</script>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改物料信息</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/form.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：基础信息管理 > 物料信息管理> 修改物料信息</span></p>
+	            
+			    	<div class="article_list" style="width: 98.5%; margin: 0px auto;">
+			            <!------- 内容 ------->
+			            <div class="content content1">
+			                <!-- 用户列表内容区 -->
+			                <div class="con con_01">
+			                    <!-- 表单信息填写区 -->
+			                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>填写物料信息</span><span class="necessary">（带*号为必填项）</span></h4>
+			                    <div class="write_area">
+			                        <form id="addFrom" action="" method="post">
+			                            <table class="contentText" border="1" cellspacing="0" cellpadding="0" width="99%">
+			                                <tbody>
+			                                    <tr>
+			                                        <th>物料编码：</th>
+			                                        <td>
+			                                        	<input id="" name="" type="text" value="tzkwl341"> <span class="redColor">*</span>
+			                                        </td>
+			                                        <th>物料名称：</th>
+			                                        <td>
+			                                        	<input id="" name=""  value="物料二"> <span class="redColor">*</span>
+			                                        </td>
+													 <th>物料类型：</th>
+			                                        <td>
+			                                        	<input id="" name="" value="热敏电阻"> <span class="redColor">*</span>
+			                                        </td>
+			                                    </tr>
+												 <tr>
+			                                        <th>所属仓库：</th>
+			                                        <td>
+			                                        	<select name=''>
+															<option >图纸库</option>
+															<option >丝网库</option>
+															<option >湿敏元件库</option>
+															<option >盘状物料库</option>
+															<option >其它仓库</option>
+														</select>
+			                                        </td>
+			                                        <th>规格型号：</th>
+			                                        <td>
+			                                        	<input id="" name="" value="XH341"> 
+			                                        </td>
+													 <th>计量单位：</th>
+			                                        <td>
+			                                        	<input id="" name="" value="个">
+			                                        </td>
+			                                    </tr>
+											    <tr>
+			                                        <th>是否有效期管理：</th>
+			                                        <td colspan='5'>
+			                                        	<select name='isValidity'>
+															<option value=0>否</option>
+															<option value=1 selected>是</option>
+														</select>
+			                                        </td>
+			                                    </tr>
+												<tr>
+			                                        <th>备注：</th>
+			                                        <td colspan='5'>
+			                                        	<textarea style="width: 95%;height: 100px;"></textarea>
+			                                        </td>
+			                                    </tr>
+			                                </tbody>
+			                            </table>
+			                        </form>
+			                        <!-- 保存、重置按钮区 -->
+			                        <!-- 确定按钮 -->
+			                        <div align="center" class="btn_submit">
+			                            <a href="materialsInformation.html" class="bgd_blue_two img_hand contentText">确定</a>
+			                            <a href="materialsInformation.html" class="bgd_white_two img_hand"> 返回 </a>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		
+		//-------- 增加明细 ---------
+	    function addDetail1() {
+	        
+	        var dom = "<tr class='contentText list_list'><td><input type='checkbox' class='input_checkBox' name='' id='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><select name='' class='selectDesc'> <option value=''>原材料</option> <option value=''>半成品</option> <option value=''>产成品</option> </select></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><select name='' class='selectDesc'> <option value=''>包</option> <option value=''></option> <option value=''>产成品</option> </select></td>";
+	        dom += "<td><input type='text' name='' value=''></td>";
+	        dom += "<td><input type='text' name='' value=''></td></tr>";
+	        
+	        $("#addTr1").append(dom);
+	    }
+		
+		//-------- 删除明细 ---------
+	    function deleteDetail1() {
+	        var checks = $("input[type='checkbox']:checked");
+	        if (checks.length == 0) {
+	            $("#addTr1").find("tr:last").remove();
+	        } else {
+	            $.each(checks, function(item, obj) {
+	                $(obj).parent().parent().remove();
+	            });
+	        }
+	    }
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+	</script>
+</html>

@@ -1,0 +1,188 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+ul{
+	list-style: none;
+}
+.menuMask{
+	width: 350px;
+	height: 450px;
+	padding: 0px 20px;
+	padding-bottom: 20px;
+	border: 2px solid rgb(200, 200, 200);
+	/*box-shadow: -5px 0 5px darkgray, 5px 0 5px darkgray, 0 -5px 5px darkgray, 0 5px 5px darkgray;*/ 
+	border-radius: 5px;
+	background: white;
+	position: absolute;
+	left: 30%;	
+	top: 5%;
+	display: none;
+	z-index: 100 !important;
+}
+.pleaseSelect{
+	font-size: 14.4px;
+	margin-top: 20px;
+	border-bottom: 2px solid rgb(157, 182, 239);
+}
+.pleaseSelect span{
+	display: inline-block;
+	padding: 3px 10px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border: 1px solid rgb(157, 182, 239);
+	border-bottom: none;
+}
+.close_btn{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+.close_btn:hover{
+	cursor: pointer;
+}
+#tree{
+	height: 335px;
+	padding-left: 20px;
+	border: 1px solid rgb(157, 182, 239);
+	overflow-y: auto;
+	padding-top: 10px;
+}
+#tree a{
+	width: 200px;
+	text-decoration: none;
+	display: inline-block;
+	/*border-bottom: 1px dotted lightgray;*/
+	text-indent: 1.5rem;
+	color: black;
+	font-size: 14.4px;
+	padding: 6px 0px;
+	border-radius: 3px;
+}
+#tree input{
+	width: 200px;
+	height: 22px;
+}
+#flowForm label{
+	font-size:15px;
+}
+.noChildren{
+	background: url(../img/left/file1.png) no-repeat;
+	background-position-y: center;
+	background-position-x: 2%;
+	text-indent: 2em;
+}
+.levelClassclass1{
+	margin-left: 20px;
+}
+.levelClassclass2{
+	margin-left: 40px;
+}
+.levelClassclass3{
+	margin-left: 60px;
+}
+/*--------- 菜单收缩 ---------*/
+.menu_bgd_sub{
+	background: url(../img/left/file_open1.png) no-repeat;
+	background-position-y: center;
+	text-indent: 2em;
+}
+/*--------- 菜单展开 ---------*/
+.menu_bgd_add{
+	background: url(../img/left/file_close1.png) no-repeat;
+	background-position-y: center;
+}
+/*--------- 选中背景 ---------*/
+.menu_bgd_selected{
+	background-color: rgb(68, 161, 248);
+	color: white !important;
+}
+/*--------- 未选中背景 ---------*/
+.menu_bgd_unselected{
+	/*background-color: rgb(240, 240, 240);*/
+	background-color: none;
+}
+.btnDiv{
+	margin: 0px auto;
+	position: absolute;
+	bottom: 30px;
+	left: 120px;
+	text-align: center;
+	/*border: 1px solid red;*/
+}
+.btnDiv img{
+	margin: 0px 10px;
+}
+.btnDiv button:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------- 当前按钮背景纯蓝色 ------*/
+.btn_blank{
+	background: rgb(68, 161, 248);
+	color: white;
+	/* padding: 1px 10px; */
+	border-radius: 3px;
+	border: 1px solid rgb(68, 161, 248);
+}
+/*------- 未选择按钮背景纯白色 ------*/
+.btn_noSelect{
+	background: rgb(255, 255, 255);
+	color: black;
+	/* padding: 1px 10px; */
+	border-radius: 3px;
+	border: 1px solid rgb(68, 161, 248);
+}
+/*------------ 设置滚动条 -----------*/
+/*------------ ie -----------*/
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+#tree::-webkit-scrollbar{  
+    width: 14px;  
+    /*height: 16px;*/  
+    background-color: rgb(235, 245, 255);  
+}    
+/*定义滚动条轨道 内阴影+圆角*/  
+#tree::-webkit-scrollbar-track{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    /*border-radius: 10px;*/  
+    background-color: rgb(235, 245, 255); 
+}  
+/*定义滑块 内阴影+圆角*/  
+#tree::-webkit-scrollbar-thumb{  
+    /*border-radius: 10px;*/  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    background-color: rgb(120, 190, 250);
+}
+/*------------ google -----------*/
+.scroll_style{
+	scrollbar-face-color: rgb(120, 190, 250);       /*-- 滚动条凸出部分的颜色 --*/
+	/*scrollbar-highlight-color: rgb(242, 245, 249); */ /*-- 滚动条空白部分的颜色 --*/
+	/*scrollbar-shadow-color: rgba(0,0,0,0.3);*/     /*-- 立体滚动条阴影的颜色 --*/
+	/*scrollbar-3dlight-color: #fcfcfc;*/    /*-- 滚动条亮边的颜色 --*/
+	scrollbar-arrow-color: rgb(50, 100, 255);      /*-- 上下按钮上三角箭头的颜色 --*/
+	scrollbar-track-color: rgb(235, 245, 255);      /*-- 滚动条的背景颜色 --*/
+	/*scrollbar-darkshadow-color: rgb(68, 161, 248);*/ /*-- 滚动条强阴影的颜色 --*/
+	/*scrollbar-base-color: #fcfcfc;*/       /*-- 滚动条的基本颜色 --*/
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+/*---------- 遮盖层 ----------*/
+.mask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000); 
+	display: none;
+}

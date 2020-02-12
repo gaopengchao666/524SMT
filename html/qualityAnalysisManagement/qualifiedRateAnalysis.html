@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>合格率分析</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：质量分析管理 > 合格率分析</span></p>
+	            
+	            <!------ tab标签 ------>
+	            <div class="layui-tab layui-tab-card">
+				    <ul class="layui-tab-title">
+					    <li class="layui-this">一次交验合格率统计</li>
+					    <li>失效模式统计</li>
+					    <li>直通率统计</li>
+				    </ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>合格率分析查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">开始日期：</label> <input type="text" name="" class="dateControl" id="dateControl" readonly="readonly" />
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">结束日期：</label> <input type="text" name="" class="dateControl" id="dateControl1" readonly="readonly" />
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+					            <!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>合格率分析图表</span></h4>
+				                	</div>
+				                	<div class="list_area clear">
+				                        <!-- 图表区 -->
+				                        <div class="info_area_left1">
+				                        	<!-- echarts图表显示区域 -->
+				                        	<div class="charts1">
+				                        		<img src="../../img/list/charts3.png"/>
+				                        	</div>
+				                        </div>
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area_right1">
+			                        		<table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th rowspan="2">编号</th>
+				                                        <th rowspan="2">计划号</th>
+				                                        <th rowspan="2">产品图号</th>
+				                                        <th rowspan="2">完成时间</th>
+				                                        <th rowspan="2">生产数量</th>
+				                                        <th rowspan="2">一次交验合格数量</th>
+				                                        <th colspan="2">一次交验合格率（%）</th>
+				                                    </tr>
+				                                    <tr class="menuText list_head">
+				                                        <th>目标值</th>
+				                                        <th>实际值</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist" id="tableflow">
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningRed">NO1</td>
+				                                        <td class="warningRed">JH20180904114232</td>
+				                                        <td class="warningRed">test1</td>
+				                                        <td class="warningRed">2018-09-04</td>
+				                                        <td class="warningRed">2</td>
+				                                        <td class="warningRed">1</td>
+				                                        <td class="warningRed">60</td>
+				                                        <td class="warningRed">50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO2</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO3</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO4</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO5</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO6</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO7</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO8</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>2</td>
+				                                        <td>1</td>
+				                                        <td>60</td>
+				                                        <td>50</td>
+				                                    </tr>
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+				                </div>
+					    	</div>
+						</div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>失效模式分析查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">开始日期：</label> <input type="text" name="" class="dateControl" id="dateControl2" readonly="readonly" />
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">结束日期：</label> <input type="text" name="" class="dateControl" id="dateControl3" readonly="readonly" />
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+					            <!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>失效模式分析图表</span></h4>
+				                	</div>
+				                	<div class="list_area clear">
+				                        <!-- 图表区 -->
+				                        <div class="info_area_left1">
+				                        	<!-- echarts图表显示区域 -->
+				                        	<div class="charts1">
+				                        		<img src="../../img/list/charts4.png"/>
+				                        	</div>
+				                        </div>
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area_right1">
+			                        		<table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th class="list_th02">失效模式</th>
+				                                        <th class="list_th03">数量</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist" id="tableflow">
+				                                    <tr class="listTableText list_list">
+				                                        <td>漏焊</td>
+				                                        <td>30</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>短路</td>
+				                                        <td>25</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>错位</td>
+				                                        <td>21</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>紧固件</td>
+				                                        <td>17</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>拉尖</td>
+				                                        <td>11</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>多装</td>
+				                                        <td>9</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>漏装</td>
+				                                        <td>5</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>型号错</td>
+				                                        <td>3</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>接线错</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+				                </div>
+					    	</div>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工单直通率分析查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">开始日期：</label> <input type="text" name="" class="dateControl" id="dateControl4" readonly="readonly" />
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">结束日期：</label> <input type="text" name="" class="dateControl" id="dateControl5" readonly="readonly" />
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+					            <!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工单直通率分析图表</span></h4>
+				                	</div>
+				                	<div class="list_area clear">
+				                        <!-- 图表区 -->
+				                        <div class="info_area_left1">
+				                        	<!-- echarts图表显示区域 -->
+				                        	<div class="charts1">
+				                        		<img src="../../img/list/charts5.png"/>
+				                        	</div>
+				                        </div>
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area_right1">
+			                        		<table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th rowspan="2">编号</th>
+				                                        <th rowspan="2">计划号</th>
+				                                        <th rowspan="2">产品图号</th>
+				                                        <th rowspan="2">完成时间</th>
+				                                        <th colspan="2">直通率（%）</th>
+				                                    </tr>
+				                                    <tr class="menuText list_head">
+				                                        <th>目标值</th>
+				                                        <th>实际值</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist" id="tableflow">
+				                                    <tr class="listTableText list_list">
+				                                        <td class="warningRed">NO1</td>
+				                                        <td class="warningRed" onclick="rolledYieldShow();">JH20180904114232</td>
+				                                        <td class="warningRed">test1</td>
+				                                        <td class="warningRed">2018-09-04</td>
+				                                        <td class="warningRed">60</td>
+				                                        <td class="warningRed">0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO2</td>
+				                                        <td onclick="rolledYieldShow();">JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO3</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO4</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO5</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO6</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO7</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>NO8</td>
+				                                        <td>JH20180904114232</td>
+				                                        <td>test1</td>
+				                                        <td>2018-09-04</td>
+				                                        <td>60</td>
+				                                        <td>0</td>
+				                                    </tr>
+				                                </tbody>
+				                            </table>
+				                        </div>
+				                    </div>
+				                </div>
+					    	</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+			
+			<!-- 工序直通率弹框 -->
+			<div class="rolledYield hidden">
+				<div class="rolledYield_content">
+					<p class="rolledYield_title">工序直通率
+						<img onclick="rolledYieldClose();" src="../../img/list/delete.png"/>
+					</p>
+					<div class="search_area">
+	                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工单信息</span></h4>
+	                    <div class="select_area">
+	                        <div class="select_text clear">
+	                        	<div class="label_input">
+		                            <label class="contentText">计划号：</label> <input type="text" name="" id="" value="JH20180904114232" readonly="readonly" />
+	                        	</div>
+	                        	<div class="label_input">
+		                            <label class="contentText">产品图号：</label> <input type="text" name="" id=""value="test1" readonly="readonly" />
+	                        	</div>
+	                        </div>
+	                    </div>
+		            </div><div class="show_list">
+	                	<div class="title_operate">
+	                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>工序直通率列表</span></h4>
+	                	</div>
+	                	<div class="list_area">
+	                		<div class="info_area">
+	                        <!-- 信息列表区 -->
+                        	<table class="tablelist" border="1" cellspacing="0" cellpadding="0">
+			                    <tbody>
+			                        <tr class="menuText list_head">
+			                            <th>工序</th>
+			                            <th>开始时间</th>
+			                            <th>结束时间</th>
+			                            <th>直通率（%）</th>
+			                        </tr>
+			                    </tbody>
+			                    <tbody class="tablelist" id="tableflow">
+			                        <tr class="listTableText list_list">
+			                            <td>印刷</td>
+			                            <td>2018-09-04</td>
+			                            <td>2018-09-04</td>
+			                            <td>--</td>
+			                        </tr>
+			                        <tr class="listTableText list_list">
+			                        	<td>过程检验</td>
+			                            <td>2018-09-04</td>
+			                            <td>2018-09-04</td>
+			                            <td>0.0</td>
+			                        </tr>
+			                        <tr class="listTableText list_list">
+			                        	<td>点胶</td>
+			                            <td>2018-09-04</td>
+			                            <td>2018-09-04</td>
+			                            <td>--</td>
+			                        </tr>
+			                        <tr class="listTableText list_list">
+			                        	<td>过程检验</td>
+			                            <td>2018-09-04</td>
+			                            <td>2018-09-04</td>
+			                            <td>50.0</td>
+			                        </tr>
+			                        <tr class="listTableText list_list">
+			                        	<td>终检</td>
+			                            <td>2018-09-04</td>
+			                            <td>2018-09-04</td>
+			                            <td>50.0</td>
+			                        </tr>
+			                    </tbody>
+			                </table>
+	                    </div>
+	                    </div>
+	                </div>
+					
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/3rd/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$("td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		// 日期控件
+		$(function(){
+	        $(".dateControl").datepicker({
+	        	dateFormat : 'yy-mm-dd',
+	            monthNamesShort:["January","February","March","April","May","June", "July","August","September","October","November","December"],
+	 		 	changeYear:true,
+	 		 	changeMonth:true,
+	 		 	showOn:"button",
+	 		 	buttonImage:"../../img/button/calendar.png",
+	 		 	buttonImageOnly:false
+	        });
+	     });
+		
+		//点击右上角关闭弹框
+		function rolledYieldClose(){
+			$(".rolledYield").css("display", "none");
+		}
+		//点击计划显示弹框
+		function rolledYieldShow(){
+			$(".rolledYield").css("display", "block");
+		}
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+	    
+	    layui.use('element', function(){
+			var $ = layui.jquery, 
+			    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+		    //触发事件：添加、删除、切换
+		    var active = {
+			    tabAdd: function(){
+			        //新增一个Tab项
+			        element.tabAdd('demo', {
+			        	title: '新选项'+ (Math.random()*1000|0), 
+			        	content: '内容'+ (Math.random()*1000|0),
+			        	id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+			        })
+			    },
+			    tabChange: function(){
+			        //切换到指定Tab项
+			        element.tabChange('demo', '22'); //切换到：“用户管理”
+			    }
+		    };
+		  
+		    $('.site-demo-active').on('click', function(){
+		    	var othis = $(this), 
+		        	type = othis.data('type');
+		    	active[type] ? active[type].call(this, othis) : '';
+		    });
+		  
+		    //Hash地址的定位
+		    var layid = location.hash.replace(/^#test=/, '');
+		    element.tabChange('test', layid);
+		  
+		    element.on('tab(test)', function(elem){
+		   		location.hash = 'test='+ $(this).attr('lay-id');
+		    });
+		});
+	</script>
+</html>

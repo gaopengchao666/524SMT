@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>生产计划管理</title>
+		<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/layui.css"/>
+	</head>
+	<body>
+		<!-- 蓝色背景区域 -->
+		<div class="wrap">
+			<!-- 白色可用区域 -->
+			<div class="canuse">
+				<!------ 位置 ------>
+	            <p class="contentText local"><span>位置：车间生产管理 > 生产计划管理</span></p>
+	            
+	            <!------ tab标签 ------>   
+	            <div class="layui-tab layui-tab-card">
+				    <ul class="layui-tab-title">
+					    <li class="layui-this">车间工单汇总</li>
+					    <li>未排产工单</li>
+					    <li>在制工单</li>
+					    <li>完工工单</li>
+					    <li>创建车间工单</li>
+					    <li style="height:33px;background: -webkit-linear-gradient(top, #f5f5f5, #e1e1e1) !important; filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=#f5f5f5, endColorstr=#e1e1e1,GradientType=0 ) !important;position:absolute; right:0; top: 0;">
+					    	<div>
+					    		<span>导出工单：</span>
+					    		<select id = "orderSelect">
+					    		    <option value = "全部"> 全部</option>
+	                            	<option value="未排产">未排产</option>
+	                            	<option value="生产中">在制</option>
+	                            	<option value="已完工">完工</option>
+	                            </select>
+	                            <button id = "exportOrder" class="bgd_blue_two">导出</button>
+					    	</div>
+					    </li>
+				    </ul>
+					<div class="layui-tab-content">
+					    <div class="layui-tab-item layui-show">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>生产计划查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目来源：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">批次号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">序列号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>生产计划总列表</span></h4>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th>计划号</th>
+				                                        <th>产品图号</th>
+				                                        <th>产品名称</th>
+				                                        <th>项目编码</th>
+				                                        <th>批次号</th>
+				                                        <th>计划数量</th>
+				                                        <th>计划开始时间</th>
+				                                        <th>计划结束时间</th>
+				                                        <th>实际开始时间</th>
+				                                        <th>实际结束时间</th>
+				                                        <th>项目类型</th>
+				                                        <th>项目来源</th>
+				                                        <th>承制班组</th>
+				                                        <th class="th_ellipsis">齐套状态</th>
+				                                        <th>车间生产计划状态</th>
+				                                        <th>备注</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist tbody_hover">
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未开工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未开工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td>JH01</td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page_jump">
+					                        	<span>跳转到&emsp;第</span>
+					                        	<input type="text" name="" id="" value="" />
+					                        	<span>页&emsp;</span>
+					                        	<button>Go</button>
+					                        </div>
+					                        <div class="page-pull-right async-page">
+					                            <button>上一页</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+					                            <button>98</button>
+					                            <button>99</button>
+					                            <button>100</button>
+					                            <button>下一页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+						</div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>生产计划查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目来源：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">批次号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">序列号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>未排产车间计划列表</span></h4>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th>计划号</th>
+				                                        <th>产品图号</th>
+				                                        <th>产品名称</th>
+				                                        <th>项目编码</th>
+				                                        <th>批次号</th>
+				                                        <th>计划数量</th>
+				                                        <th>计划开始时间</th>
+				                                        <th>计划结束时间</th>
+				                                        <th>实际开始时间</th>
+				                                        <th>实际结束时间</th>
+				                                        <th>项目类型</th>
+				                                        <th>项目来源</th>
+				                                        <th>承制班组</th>
+				                                        <th class="th_ellipsis">齐套状态</th>
+				                                        <th>车间生产计划状态</th>
+				                                        <th>备注</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist tbody_hover">
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="homogeneityTest.html">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>未排产</td>
+				                                        <td></td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page_jump">
+					                        	<span>跳转到&emsp;第</span>
+					                        	<input type="text" name="" id="" value="" />
+					                        	<span>页&emsp;</span>
+					                        	<button>Go</button>
+					                        </div>
+					                        <div class="page-pull-right async-page">
+					                            <button>上一页</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+					                            <button>98</button>
+					                            <button>99</button>
+					                            <button>100</button>
+					                            <button>下一页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+						</div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>生产计划查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目来源：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">批次号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">序列号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>在制车间计划列表</span></h4>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th>计划号</th>
+				                                        <th>产品图号</th>
+				                                        <th>产品名称</th>
+				                                        <th>项目编码</th>
+				                                        <th>批次号</th>
+				                                        <th>计划数量</th>
+				                                        <th>计划开始时间</th>
+				                                        <th>计划结束时间</th>
+				                                        <th>实际开始时间</th>
+				                                        <th>实际结束时间</th>
+				                                        <th>项目类型</th>
+				                                        <th>项目来源</th>
+				                                        <th>承制班组</th>
+				                                        <th class="th_ellipsis">齐套状态</th>
+				                                        <th>车间生产计划状态</th>
+				                                        <th>备注</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist tbody_hover">
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="stationProductionOperator.html">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>在制</td>
+				                                        <td></td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page_jump">
+					                        	<span>跳转到&emsp;第</span>
+					                        	<input type="text" name="" id="" value="" />
+					                        	<span>页&emsp;</span>
+					                        	<button>Go</button>
+					                        </div>
+					                        <div class="page-pull-right async-page">
+					                            <button>上一页</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+					                            <button>98</button>
+					                            <button>99</button>
+					                            <button>100</button>
+					                            <button>下一页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<div class="content">
+					    		<!-- 搜索区 -->
+					            <div class="search_area">
+				                    <h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>生产计划查询条件</span></h4>
+				                    <div class="select_area">
+				                        <div class="select_text clear">
+				                        	<div class="label_input">
+					                            <label class="contentText">计划号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目编码：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">项目来源：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">批次号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">序列号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                        	<div class="label_input">
+					                            <label class="contentText">产品图号：</label> <input type="text" name="" id="">
+				                        	</div>
+				                            <div class="floatLeft">
+					                            <button class="btn_search bgd_blue_search">查询</button>
+					                            <button class="btn_clear bgd_white_clear">重置</button>
+				                            </div>
+				                        </div>
+				                    </div>
+					            </div>
+		            
+		            			<!-- 列表区 -->
+					            <div class="show_list">
+				                	<div class="title_operate">
+				                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>完工车间计划列表</span></h4>
+				                	</div>
+				                	<div class="list_area">
+				                        <!-- 信息列表区 -->
+				                        <div class="info_area">
+				                            <table class="tablelist" border="1" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+				                                <tbody>
+				                                    <tr class="menuText list_head">
+				                                        <th>计划号</th>
+				                                        <th>产品图号</th>
+				                                        <th>产品名称</th>
+				                                        <th>项目编码</th>
+				                                        <th>批次号</th>
+				                                        <th>计划数量</th>
+				                                        <th>计划开始时间</th>
+				                                        <th>计划结束时间</th>
+				                                        <th>实际开始时间</th>
+				                                        <th>实际结束时间</th>
+				                                        <th>项目类型</th>
+				                                        <th>项目来源</th>
+				                                        <th>承制班组</th>
+				                                        <th class="th_ellipsis">齐套状态</th>
+				                                        <th>车间生产计划状态</th>
+				                                        <th>备注</th>
+				                                    </tr>
+				                                </tbody>
+				                                <tbody class="tablelist tbody_hover">
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="completionReport.html">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                    <tr class="listTableText list_list">
+				                                        <td><a class="cursor" href="">JH01</a></td>
+				                                        <td>IMAGE01</td>
+				                                        <td>产品一</td>
+				                                        <td>P001101</td>
+				                                        <td>PC10010</td>
+				                                        <td>1000</td>
+				                                        <td>2018-02-15</td>
+				                                        <td>2018-02-28</td>
+				                                        <td>2018-09-07 08:52:29</td>
+				                                        <td>2018-09-17 21:37:16</td>
+				                                        <td>普通项目</td>
+				                                        <td>来源一</td>
+				                                        <td>一厂</td>
+				                                        <td class="td_ellipsis" title="更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。">更新时间：2018-05；已到物料：物料一10个，物料二100个，物料三500个；详情：物料一补料80个，物料二补料200个，物料三补料50个。。。</td>
+				                                        <td>已完工</td>
+				                                        <td></td>
+				                                    </tr>
+				                                </tbody>
+				
+				                            </table>
+				                        </div>
+					                    <!-- 页码区域 -->
+					                    <div class="page_area contentText clear">
+					                    	<div class="page_sum">
+					                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 27 </span>条记录
+					                    	</div>
+					                        <div class="page_jump">
+					                        	<span>跳转到&emsp;第</span>
+					                        	<input type="text" name="" id="" value="" />
+					                        	<span>页&emsp;</span>
+					                        	<button>Go</button>
+					                        </div>
+					                        <div class="page-pull-right async-page">
+					                            <button>上一页</button>
+					                            <button class="select_page">1</button>
+					                            <button>2</button>
+					                            <button>3</button>
+					                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+					                            <button>98</button>
+					                            <button>99</button>
+					                            <button>100</button>
+					                            <button>下一页</button>
+					                        </div>
+					                    </div>
+				                    </div>
+				                </div>
+					    	</div>
+					    </div>
+					    <div class="layui-tab-item">
+					    	<!-- 列表区 -->
+				            <div class="show_list" style="width: 101.5%;margin: 0px auto;margin-left: -10px;margin-bottom: 20px;">
+			                	<div class="title_operate">
+			                    	<h4 class="sel_title"><img src="../../img/list/brand1.png" /><span>创建车间计划</span></h4>
+			                	</div>
+			                	<div class="list_area">
+			                        <!-- 信息列表区 -->
+			                        <div class="info_area">
+			                        	<form id="addForm">
+				                            <table class="tablelist" border="1" cellspacing="0"  id="creatOrder" cellpadding="0">
+												<tr class="menuText list_head">
+													<th>计划号：</th>
+													<td><input  id="planCode" style="margin-left:10px;"></input></td>
+													<th>产品图号：</th>
+													<td><div  class='addRemind1'><input type="text" name="imageCode" id="imageCode" /> <span class="redColor">*</span></div></td>
+													<th>项目编号：</th>
+													<td><div  class='addRemind1'><input type="text" name="projectCode" id="projectCode"  /> <span class="redColor">*</span></div></td>
+												</tr>
+												<tr class="menuText list_head">
+													<th>计划数量：</th>
+													<td><div  class='addRemind1'><input type="text" name="planNum" id="planNum"  /> <span class="redColor">*</span></div></td>
+													<th>计划开始时间：</th>
+													<td><div  class='addRemind1'><input readonly="readonly" name="planStartTime"
+														id="planStartTime" /> <span class="redColor">*</span></div></td>
+													<th>计划结束时间：</th>
+													<td><div  class='addRemind1'><input readonly="readonly" name="planEndTime"
+														id="planEndTime" /> <span class="redColor">*</span></div></td>
+												</tr>
+												<tr class="menuText list_head">
+													<th>批次：</th>
+													<td><div  class='addRemind1'><input type="text" name="batch" id="batch" value="" /> <span class="redColor">*</span></div></td>
+													<th>项目来源：</th>
+													<td><div  class='addRemind1'><input type="text" name="projectFrom" id="projectFrom" 
+														value="" /> <span class="redColor">*</span></div></td>
+													<th>项目类型：</th>
+													<td><div  class='addRemind1'><select id="projectType" name="" style="height:22px;">
+															<option value="生产">生产</option>
+															<option value="科研">科研</option>
+													</select></div></td>
+												</tr>
+												<tr class="menuText list_head">
+													<th>产品名称：</th>
+													<td><div  class='addRemind1'><input type="text" name="productName" id="productName" /> <span class="redColor">*</span></div></td>
+													<th>承制班组：</th>
+													<td><div  class='addRemind1'><input type="text" name="makeTeam" id="makeTeam" 
+														value="" /> <span class="redColor">*</span></div></td>
+													<th>创建人：</th>
+													<td><span id="createPeople" style="margin-left:10px;"></span></td>
+												</tr>
+												<tr class="menuText list_head">
+													<th>备注：</th>
+													<td colspan="5"><textarea id="info"
+															style="width: 95%; height: 100px;"></textarea></td>
+												</tr>
+											</table>
+										</form>
+			                        </div>
+			                        <!-- 保存、重置按钮区 -->
+			                        <div align="center" class="btn_submit">
+			                            <a href="" class="bgd_blue_two img_hand contentText" style="color: white;">确定</a>
+			                            <a href="" class="bgd_white_two img_hand">返回</a>
+			                        </div>
+			                    </div>
+			                </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<!-- 版尾  -->
+			<div class="ending">
+				Copyright© 2017-2018 西安磐基新能源科技有限公司
+			</div>
+		</div>
+	</body>
+	<script src="../../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/frame/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/layui.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var h = document.documentElement.clientHeight;
+		$(".wrap").css("height", h);
+		
+		// 获取每行 td 的兄弟节点
+		$(".tbody_hover td").hover(   
+			function () {      
+				$(this).parent().children().addClass("td_hover");   
+			},    
+			function () {      
+				$(this).parent().children().removeClass("td_hover");   
+			}
+		);
+		
+		// 可编辑下拉框取值
+		function getContent(){
+			$("#inputText").val($("#selectText option:selected").val());
+		}
+		function getContent1(){
+			$("#inputText1").val($("#selectText1 option:selected").val());
+		}
+		function getContent2(){
+			$("#inputText2").val($("#selectText2 option:selected").val());
+		}
+		
+		//删除规则
+	    function delUserGroup() {
+			
+	        var list = [];
+	        var checks = $("input[name='ids']:checked");
+	        $.each(checks, function(index, obj) {
+	            list.push(obj.id);
+	        });
+	        if (!list.length > 0) {
+	            alert("请选择要删除的内容");
+	            return;
+	        }
+	        if (!confirm("确定要删除所选用户组吗？")) {
+	            return;
+	        }
+	        alert("提醒:删除时，正在使用的用户组将无法删除！");
+	        $.ajax({
+	            type : 'POST',
+	            url : 'userGroup/delUserGroup',
+	            data : JSON.stringify(list),
+	            contentType : 'application/json; charset=utf-8',
+	            async : true,
+	            cache : false,
+	            success : function(data) {
+	                alert(data == 'success' ? "删除成功" : "被使用：无法删除!!!");
+	                if (data != 'success') {
+	                    return;
+	                }
+	
+	                var current = PageUtils._currentPage['userGroupPage'];
+	                PageUtils.pageClick(current, 'userGroupPage');
+	            }
+	
+	        });
+	    }
+	    
+	    layui.use('element', function(){
+			var $ = layui.jquery, 
+			    element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+			  
+		    //触发事件：添加、删除、切换
+		    var active = {
+			    tabAdd: function(){
+			        //新增一个Tab项
+			        element.tabAdd('demo', {
+			        	title: '新选项'+ (Math.random()*1000|0), 
+			        	content: '内容'+ (Math.random()*1000|0),
+			        	id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+			        })
+			    },
+			    tabChange: function(){
+			        //切换到指定Tab项
+			        element.tabChange('demo', '22'); //切换到：“用户管理”
+			    }
+		    };
+		  
+		    $('.site-demo-active').on('click', function(){
+		    	var othis = $(this), 
+		        	type = othis.data('type');
+		    	active[type] ? active[type].call(this, othis) : '';
+		    });
+		  
+		    //Hash地址的定位
+		    var layid = location.hash.replace(/^#test=/, '');
+		    element.tabChange('test', layid);
+		  
+		    element.on('tab(test)', function(elem){
+		   		location.hash = 'test='+ $(this).attr('lay-id');
+		    });
+		});
+	</script>
+</html>
