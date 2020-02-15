@@ -655,3 +655,142 @@ textarea{
     background-position: 0px -20px;
 }
 
+/*-- 修改 --*/
+.bgd_modify{
+	background:url(../img/button/bgd_modify.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 增加明细 --*/
+.bgd_add_detail
+{
+	 background:url(../img/button/bgd_add_detail.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-indent:20px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 删除明细 --*/
+.bgd_delete_detail
+{
+	 background:url(../img/button/bgd_delete_detail.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-indent:20px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 密码重置 --*/
+
+.bgd_modifyPassword
+{
+	 background:url(../img/button/bgd_modifyPassword.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:80px;
+	 height:22px;
+	 text-indent:20px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 更新 --*/
+.bgd_update{
+	background:url(../img/button/bgd_update.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 升版 --*/
+.bgd_version{
+	background:url(../img/button/bgd_version.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 发布 --*/
+.bgd_publish{
+	background:url(../img/button/bgd_publish.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 暂停 --*/
+.bgd_pause{
+	background:url(../img/button/bgd_pause.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 恢复 --*/
+.bgd_recover{
+	background:url(../img/button/bgd_recover.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 撤回 --*/
+.bgd_withdraw{
+	background:url(../img/button/bgd_withdraw.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+/*-- 打印 --*/
+.bgd_print{
+	background:url(../img/button/bgd_print.png) no-repeat;
+	 display:inline-block;
+	 font-size:14px;
+	 width:60px;
+	 height:22px;
+	 text-indent:25px;
+	 line-height:22px;
+	 color:rgb(30,60,230);
+}
+
+/*整体宽度样式*/
+.flex-td-15{
+	width: 15%;
+}
+
+.flex-td-85{
+	width: 85%;
+}
+
+.floatLeft{
+	float: left;
+}
+

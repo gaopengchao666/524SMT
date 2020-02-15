@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>产品信息管理</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/list.css"/>
+		
+</head>
+<body>
+			<!-- 蓝色背景区域 -->
+			<div class="wrap">
+				<!-- 白色可用区域 -->
+				<div class="canuse">
+					<!------ 位置 ------>
+					<p class="contentText local">
+						<span>位置：生产基础信息管理 >通用工艺管理</span>
+					</p>
+					<div  id="" class="show_search">
+						<h4 class="sel_title">
+						<img src='../../img/list/brand1.png' id="" class="" name=""/>
+						<span  id="" class="">通用工艺查询条件</span>
+						</h4>
+						<div  id="searchContent" class="show_area contentText clear">
+						<form method='post' class="select_text" name="" id="formArea">
+							<div  id="" class="label_input">
+								<label  id="" class="contentText">通用工艺编号:</label>
+								<input  class="" name = "technologyCode" id = ""/>
+							</div>
+							<div  id="" class="label_input">
+								<label  id="" class="contentText">通用工艺名称:</label>
+								<input  class="" name = "technologyName" id = ""/>
+							</div>
+							<div  id="" class="label_input">
+								<label  id="" class="contentText">通用工艺版本:</label>
+								<input  class="" name = "technologyVersion" id = ""/>
+							</div>
+						</form>
+						<div  id="" class="label_input">
+							<button  class="btn_search bgd_blue_search" name = "" id = "search">查询</button>
+							<button  class="btn_clear bgd_white_clear" name = "" id = "searchClear">重置</button>
+						</div>
+						</div>
+					</div>
+					<div  id="" class="show_list" style="height: 95%;">
+							
+							<div>
+									<div  id="" class="title_operate">
+									<h4 class="sel_title"><img src='../../img/list/brand1.png' id="" class="" name=""/>
+									<span  id="" class="">通用工艺信息列表</span>
+									</h4>
+										<div  id="" class="operate_area">
+											<a class="bgd_add img_hand" id="toAddJsp" >增加</a>
+											<a class="bgd_delete img_hand" id="del" >删除</a>
+											<a class="bgd_modify img_hand" id="toUpdateJsp" >编辑</a>
+											<a class="bgd_version img_hand" id="copy" >升版</a>
+										</div>
+									</div>
+									<div  id="" class="info_area">
+									<table class="tablelist" border="1" cellspacing="0" cellpadding="0" id="">
+									<tbody>
+										<tr class="menuText list_head">
+											<th class="checkSelectAll"></th>
+											<th>序号</th>
+											<th>通用工艺编号</th>
+											<th>通用工艺名称</th>
+											<th>通用工艺类型</th>
+											<th>通用工艺版本</th>
+											<th>创建人</th>
+											<th>创建日期</th>
+											<th>修改人</th>
+											<th>修改时间</th>
+											<th>备注</th>
+										</tr>
+									</tbody>
+									<tbody id='tableList'> 
+										<tr>
+											<td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+											<td>1</td>
+											<td>test-09</td>
+											<td>通用</td>
+											<td>调试</td>
+											<td>1.0</td>
+											<td>administrator</td>
+											<td>2020-02-15</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											
+										</tr>
+										<tr>
+											<td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+											<td>2</td>
+											<td>test-08</td>
+											<td>通用</td>
+											<td>调试</td>
+											<td>1.0</td>
+											<td>administrator</td>
+											<td>2020-02-15</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											
+										</tr>
+										<tr>
+											<td><input type="checkbox" class="input_checkBox" name="" id="" value=""></td>
+											<td>3</td>
+											<td>test-07</td>
+											<td>通用</td>
+											<td>调试</td>
+											<td>1.0</td>
+											<td>administrator</td>
+											<td>2020-02-15</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											
+										</tr>
+									</tbody>
+								</table>
+							
+						
+						</div>
+						<!-- 页码区域 -->
+	                    <div class="page_area contentText clear">
+	                    	<div class="page_sum">
+	                    		共<span class="page_number"> 3 </span>页&emsp;每页 10 条&emsp;共<span class="info_sum"> 3 </span>条记录
+	                    	</div>
+	                        <div class="page_jump">
+	                        	<span>跳转到&emsp;第</span>
+	                        	<input type="text" name="" id="" value="" />
+	                        	<span>页&emsp;</span>
+	                        	<button>Go</button>
+	                        </div>
+	                        <div class="page-pull-right async-page">
+	                            <button>上一页</button>
+	                            <button class="select_page">1</button>
+	                            <button>2</button>
+	                            <button>3</button>
+	                            <button style="color: rgb(30, 30, 30);">▪▪▪</button>
+	                            <button>98</button>
+	                            <button>99</button>
+	                            <button>100</button>
+	                            <button>下一页</button>
+	                        </div>
+	                    </div>
+						
+						<div id = "childProcessTable" class = "flex-td-12 hidden" style="width: 100%;">
+								<div  id="" class="title_operate">
+								<h4 class="sel_title"><img src='../../img/list/brand1.png' id="" class="" name=""/>
+								<span  id="" class="">工序信息列表</span>
+								</h4>
+								</div><div  id="" class="show_area">
+								<table class="tablelist" border="1" cellspacing="0" cellpadding="0" id="">
+								<tbody>
+									<tr  class="menuText list_head">
+										<th>序号</th>
+										<th>工序编号</th>
+										<th>工序名称</th>
+										<th>工序文件</th>
+										<th>备注</th>
+										<th>下一道工序</th>
+									</tr>
+								</tbody>
+								<tbody id='childTableList'> 
+								</tbody>
+							</table><div  id="childTablelPage" class="page_area contentText clear"></div></div>
+						
+						</div>
+		</div>
+	</div>
+<!-- 版尾  -->
+<div class="ending">
+	Copyright© 2019 磐基技术有限公司
+</div>
+</div>
+</body>
+<script src='../../js/3rd/jquery-1.9.1.min.js' type='text/javascript' charset='utf-8'></script>
+<script src='../../js/common/common.js' type='text/javascript' charset='utf-8'></script>
+<script src="../../js/baseInfo/uploadFileOperate.js" type="text/javascript" charset='utf-8'></script>
+<script type="text/javascript" charset='utf-8'>
+	// 页面刷新顺序是先刷新产品树结构，然后在刷新右边的产品对应的数据
+	
+		
+	// 点击新增通用工艺
+	$("#toAddJsp").click(function(){
+			window.location.href = 'commonTechnologyAdd.html';
+			
+	});
+	
+	/*// 批量删除工艺
+		$("#del").click(function(){
+			var list = [];//项目中要删除的id集合
+			var checks = $("input[type='checkbox']:checked");
+			$.each(checks,function(index, obj) {
+				list.push(obj.id);
+			});
+		
+			if(list.length == 0) {
+				return;
+			}
+			
+			window.confirm("确定要删除吗?",function(result){
+				if(result){
+					var deleteMaterialsUrl = basePath+"commonTechnology/deletesCommonTechnologyMethod";
+					CommonUtils.getAjaxData({
+						url : deleteMaterialsUrl,
+						data : JSON.stringify(list),
+						contentType : 'application/json; charset=utf-8',
+						dataType:'json',
+						type : 'POST',
+						async:true,
+					}, function(data) {
+						if (data['msg'] =="SUCCESS"){
+							getTableData();
+						}
+					});
+				}
+			});
+	});*/
+		
+		// 更新
+		$("#toUpdateJsp").click(function(){
+			var checks = $("input[type='checkbox']:checked");
+			if(checks.length == 1){
+				var id = checks[0].id;
+				// 更新
+				window.location.href = "commonTechnologyUpdate.html";
+			}else if(checks.length > 1){
+				alert("只能选择一个工艺进行修改更新！");
+			}else{
+				alert("请选择一个工艺进行修改更新！");
+			}
+	});
+		
+		//升级
+		$("#copy").click(function(){
+			var checks = $("input[type='checkbox']:checked");
+			if(checks.length == 1){
+				var id = checks[0].id;
+				alert("copy id 数据");
+/*				copyTechnologyUpGrade(id);
+*/			}else if(checks.length > 1){
+				alert("只能选择一个工艺进行升级！");
+			}else{
+				alert("请选择一个工艺进行升级！");
+			}
+		});
+		/*
+		// 升级版本
+		function copyTechnologyUpGrade(id) {
+			//
+			$.ajax({
+				url:"/commonTechnology/copyCommonTechnologyUpGrade",
+				type:"POST",
+				data:{"id":id},
+				dataType:"text",
+				success:function(resultData){
+					if("success" == resultData){
+
+						getTableData();
+					}else{
+						alert("升级失败");
+					}
+				},
+				error:function(resultData){
+					alert("升级失败！");
+				}
+				
+			});
+			
+		}
+		
+*/		// 获得工艺对应的工序数据
+				
+	</script>
+	</html>
